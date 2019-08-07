@@ -1,0 +1,71 @@
+{
+  "name": "statebank.mn",
+  "version": "1.0.0",
+  "description": "statebank.mn new UI/UX",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --host 0.0.0.0 --mode development",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuguldur/statebank.mn.git"
+  },
+  "keywords": [
+    "Төрийн",
+    "банк",
+    "Bank",
+    "of",
+    "Mongolia",
+    "Mongolian",
+    "bank",
+    "Statebank",
+    "of",
+    "Mongolia",
+    "Гялс",
+    "банк",
+    "үйлчилгээ",
+    "Банкны",
+    "шилдэг",
+    "онлайн",
+    "үйлчилгээ",
+    "Mongolian",
+    "State",
+    "bank",
+    "Smart",
+    "bank",
+    "Смарт",
+    "Банк",
+    "И-Биллинг"
+  ],
+  "author": "Khuvituguldur Narantsetseg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuguldur/statebank.mn/issues"
+  },
+  "homepage": "https://github.com/tuguldur/statebank.mn#readme",
+  "dependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.1.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^1.0.0",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0"
+  },
+  "browsersList": [
+    ">0.2%",
+    "not dead",
+    "not ie<=11",
+    "not op_mini all"
+  ]
+}
