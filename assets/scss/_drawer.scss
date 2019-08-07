@@ -18,19 +18,12 @@
 nav li {
   padding-bottom: 0;
 }
-
 .drawer-list__item {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 42px;
-}
-.drawer-link,
-.drawer-link:active,
-.drawer-link:focus,
-.drawer-link:hover {
-  text-decoration: none;
 }
 .side-nav__link {
   font-family: Roboto, sans-serif;

@@ -48,13 +48,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html",
       filename: "index.html",
+      favicon: "assets/images/favicon.ico",
       chunks: ["main"],
-      // REMOVE ME
       minify: {
         removeComments: true,
         collapseWhitespace: true
       }
-      // REMOVE ME END
     })
   ]
 };
