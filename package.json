@@ -53,14 +53,15 @@
     "autoprefixer": "^9.6.1",
     "bootstrap": "^4.3.1",
     "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
     "jquery": "^3.4.1",
+    "material-components-web": "^3.1.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
-    "style-loader": "^1.0.0",
-    "file-loader": "^4.1.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0"
+    "style-loader": "^1.0.0"
   },
   "browsersList": [
     ">0.2%",

@@ -21,8 +21,13 @@
   </head>
   <body>
     <header id="header">
+      <div class="drawer-button-container">
+        <button class="mdc-icon-button material-icons" id="drawer-button">
+          menu
+        </button>
+      </div>
       <div class="header-lockup">
-        <a href="/w/mn/">
+        <a href="/">
           <img class="logo" src="/assets/images/logo.png" />
         </a>
       </div>
@@ -54,5 +59,47 @@
         </ul>
       </div>
     </header>
+    <!-- Drawer -->
+    <aside class="mdc-drawer mdc-drawer--modal dev-drawer">
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <span class="side-nav__section-title">Холбоосууд</span>
+          <ul class="side-nav__menu side-nav__menu--sections">
+            <li class="side-nav__menu-item drawer-list__item--active">
+              <a class="side-nav__link" href="#">
+                Нүүр
+              </a>
+            </li>
+            <li class="side-nav__menu-item">
+              <a class="side-nav__link" href="#">
+                Иргэд
+              </a>
+            </li>
+            <li class="side-nav__menu-item">
+              <a class="side-nav__link" href="#">
+                Байгууллага
+              </a>
+            </li>
+            <li class="side-nav__menu-item">
+              <a class="side-nav__link" href="#">
+                Бидний тухай
+              </a>
+            </li>
+            <li class="side-nav__menu-item">
+              <a class="side-nav__link" href="#">
+                Шилэн данс
+              </a>
+            </li>
+            <li class="side-nav__menu-item">
+              <a class="side-nav__link" href="#">
+                Тусламж
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="mdc-drawer-scrim"></div>
   </body>
 </html>
