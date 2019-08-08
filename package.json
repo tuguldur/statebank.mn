@@ -2,10 +2,11 @@
   "name": "statebank.mn",
   "version": "1.0.0",
   "description": "statebank.mn new UI/UX",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "webpack-dev-server --progress --host 0.0.0.0 --mode development",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -52,8 +53,9 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "bootstrap": "^4.3.1",
-    "css-loader": "^3.1.0",
-    "file-loader": "^4.1.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "gh-pages": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
     "jquery": "^3.4.1",
     "material-components-web": "^3.1.0",

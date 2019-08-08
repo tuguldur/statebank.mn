@@ -53,7 +53,9 @@ module.exports = {
       minify: {
         removeComments: true,
         collapseWhitespace: true
-      }
+      },
+      hash: true,
+      inject: true
     })
   ]
 };

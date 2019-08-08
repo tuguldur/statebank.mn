@@ -1,9 +1,21 @@
+$mdc-theme-primary: #00aeef;
+$mdc-theme-secondary: #000;
+
 @import "@material/icon-button/mdc-icon-button";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/ripple/mdc-ripple";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
 
 @import "reset";
 @import "bootstrap";
 @import "navbar";
 @import "drawer";
+@import "homepage";
+
+@import "login";

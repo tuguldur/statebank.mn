@@ -1,0 +1,16 @@
+#homepage {
+  padding: 75px 0 10%;
+  height: unset;
+  min-height: calc(100% - 64px);
+  position: relative;
+  @media (max-width: 767px) {
+    height: 100%;
+    min-height: unset;
+    padding-top: 30px;
+    padding-bottom: 75px;
+  }
+  @media (max-width: 320px) {
+    height: unset;
+    padding-top: 40px;
+  }
+}

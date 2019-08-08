@@ -21,47 +21,49 @@
   </head>
   <body>
     <header id="header">
-      <div class="drawer-button-container">
-        <button class="mdc-icon-button material-icons" id="drawer-button">
-          menu
-        </button>
-      </div>
-      <div class="header-lockup">
-        <a href="/">
-          <img class="logo" src="<%=require('./assets/images/logo.png')%>" />
-        </a>
-      </div>
-      <div class="header-nav">
-        <ul class="header-nav-list">
-          <li>
-            <a href="#" class="header-nav-link">Иргэд</a>
-          </li>
-          <li>
-            <a href="#" class="header-nav-link">Байгууллага</a>
-          </li>
-          <li>
-            <a href="#" class="header-nav-link">Бидний тухай</a>
-          </li>
-          <li>
-            <a href="#" class="header-nav-link">Шилэн данс</a>
-          </li>
-          <li>
-            <a href="#" class="header-nav-link">Тусламж</a>
-          </li>
-          <li>
-            <a href="#" type="button" class="nav-call-link">
-              <i class="material-icons">
-                call
-              </i>
-              18001881
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="icon-button-container">
-        <button class="mdc-icon-button material-icons">
-          search
-        </button>
+      <div class="container d-flex">
+        <div class="drawer-button-container">
+          <button class="mdc-icon-button material-icons" id="drawer-button">
+            menu
+          </button>
+        </div>
+        <div class="header-lockup">
+          <a href="/">
+            <img class="logo" src="<%=require('./assets/images/logo.png')%>" />
+          </a>
+        </div>
+        <div class="header-nav">
+          <ul class="header-nav-list">
+            <li>
+              <a href="#" class="header-nav-link">Иргэд</a>
+            </li>
+            <li>
+              <a href="#" class="header-nav-link">Байгууллага</a>
+            </li>
+            <li>
+              <a href="#" class="header-nav-link">Бидний тухай</a>
+            </li>
+            <li>
+              <a href="#" class="header-nav-link">Шилэн данс</a>
+            </li>
+            <li>
+              <a href="#" class="header-nav-link">Тусламж</a>
+            </li>
+            <li>
+              <a href="#" type="button" class="nav-call-link">
+                <i class="material-icons">
+                  call
+                </i>
+                18001881
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="icon-button-container">
+          <button class="mdc-icon-button material-icons">
+            search
+          </button>
+        </div>
       </div>
     </header>
     <!-- Drawer -->
@@ -104,7 +106,144 @@
         </nav>
       </div>
     </aside>
-
     <div class="mdc-drawer-scrim"></div>
+    <!-- Hero -->
+    <div class="left-split">
+      <div id="form-container">
+        <div class="tab-container">
+          <div class="mdc-tab-bar" role="tablist">
+            <div class="mdc-tab-scroller">
+              <div
+                class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+              >
+                <div class="mdc-tab-scroller__scroll-content">
+                  <button
+                    class="mdc-tab mdc-tab--active"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                    id="btn-bank"
+                  >
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">ГЯЛС БАНК</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span></button
+                  ><button
+                    class="mdc-tab"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    id="btn-e-billing"
+                  >
+                    <span class="mdc-tab__content"
+                      ><span class="mdc-tab__text-label">И-БИЛЛИНГ</span></span
+                    ><span class="mdc-tab-indicator"
+                      ><span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span></span
+                    ><span class="mdc-tab__ripple"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-bank">
+            <div class="input-container">
+              <div
+                class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
+              >
+                <i class="material-icons mdc-text-field__icon"
+                  >account_circle</i
+                >
+                <input
+                  class="mdc-text-field__input"
+                  id="text-field-hero-input"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label
+                      for="text-field-hero-input"
+                      class="mdc-floating-label"
+                      >Нэвтрэх нэр</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+              </div>
+            </div>
+            <div class="input-container help-btn">
+              <button class="mdc-button">ГАРЫН АВЛАГА</button>
+              <div class="f-s"></div>
+              <button class="mdc-button">НУУЦ ҮГ СЭРГЭЭХ</button>
+            </div>
+            <div class="input-container">
+              <button class="mdc-button mdc-button--raised">Нэвтрэх</button>
+            </div>
+          </div>
+          <div id="tab-e-billing" class="d-none">
+            <div class="input-container">
+              <div
+                class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
+              >
+                <i class="material-icons mdc-text-field__icon"
+                  >account_circle</i
+                >
+                <input
+                  class="mdc-text-field__input"
+                  id="text-field-hero-input"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label
+                      for="text-field-hero-input"
+                      class="mdc-floating-label"
+                      >Нэвтрэх нэр</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+              </div>
+              <div
+                class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
+              >
+                <i class="material-icons mdc-text-field__icon">lock</i>
+                <input
+                  class="mdc-text-field__input"
+                  id="text-field-hero-input"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label
+                      for="text-field-hero-input"
+                      class="mdc-floating-label"
+                      >Нууц үг</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+              </div>
+            </div>
+            <div class="input-container help-btn">
+              <button class="mdc-button">ШИНЭ ХЭРЭГЛЭГЧ БОЛОХ</button>
+              <div class="f-s"></div>
+              <button class="mdc-button">НУУЦ ҮГЭЭ МАРТСАН БОЛ</button>
+              <div class="f-s"></div>
+              <button class="mdc-button">ТУСЛАМЖ</button>
+            </div>
+            <div class="input-container">
+              <button class="mdc-button mdc-button--raised">Нэвтрэх</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
