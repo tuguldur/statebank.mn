@@ -45,9 +45,9 @@
   }
 }
 .tab-container {
-  //   height: 380px;
+  background: #fff;
   width: 380px;
-  border: 1px solid #00aeef;
+  border: 1px solid transparent;
   border-radius: 16px;
   .mdc-tab-scroller {
     border-top-left-radius: 16px;
@@ -67,11 +67,10 @@
     }
   }
   &:last-child {
-    .mdc-button {
+    .mdc-button--raised {
       color: #fff !important;
     }
     display: flex;
-    flex-direction: row-reverse;
     margin-top: 0;
     margin-bottom: 20px;
   }

@@ -3,9 +3,9 @@ import { MDCDrawer } from "@material/drawer";
 
 import "./init";
 import "./drawer";
+import "./card";
 import "../scss/index.scss";
 // import "bootstrap/js/bootstrap.min.js";
-
 const drawer = MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
 $("#drawer-button").click(() => {
   drawer.open = true;
@@ -18,4 +18,8 @@ $("#btn-bank").click(() => {
 $("#btn-e-billing").click(() => {
   $("#tab-bank").addClass("d-none");
   $("#tab-e-billing").removeClass("d-none");
+});
+$("#scroll-top").click(() => {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
 });

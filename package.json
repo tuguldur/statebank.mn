@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress --host 0.0.0.0 --mode development",
     "build": "webpack -p",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --git git"
   },
   "repository": {
     "type": "git",
