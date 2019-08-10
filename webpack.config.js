@@ -43,7 +43,8 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "bundle.min.css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
+      allChunks: true
     }),
     new HtmlWebpackPlugin({
       template: "./index.html",

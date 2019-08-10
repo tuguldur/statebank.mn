@@ -1,5 +1,5 @@
 #footer {
-  background: #fafafa;
+  background: linear-gradient(90deg, #fafafa 50%, #ececec 50%);
   font: 14px/16px Roboto, sans-serif;
   .footer-nav-list {
     display: flex;
@@ -30,6 +30,13 @@
     }
   }
 }
+.footer-linkbox:last-child {
+  padding-right: 24px;
+}
+.footer-linkbox-sites {
+  background: #ececec;
+  text-transform: uppercase;
+}
 .footer-linkbox-heading {
   color: #263238;
   font: 500 14px/16px Roboto, sans-serif;
@@ -41,10 +48,14 @@
 }
 .footer-linkbox-item {
   margin: 0;
-  a {
+  a,
+  span {
     color: #263238;
     display: block;
     padding: 8px 0;
+  }
+  a:hover {
+    color: #00aeef;
   }
 }
 #copy {
@@ -57,42 +68,30 @@
   }
 }
 .footer-nav-left,
-.footer-nav-right {
+.footer-nav-right,
+.footer-nav-middle {
   align-items: center;
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 .footer-nav-left {
   float: left;
-  .nav-language {
-    margin-right: 16px;
+  img {
+    max-height: 50px;
   }
 }
-.nav-language-select {
-  font-weight: 500;
-  position: relative;
-  text-transform: uppercase;
-  background: #fff;
-  border: 1px solid #ebebeb;
-  border-radius: 2px;
-  box-shadow: none;
-  color: #212121;
-  cursor: pointer;
-  display: inline-block;
-  font: 14px/20px Roboto, sans-serif;
-  height: 36px;
-  outline: 0;
-  overflow: hidden;
-  padding: 7px;
-  text-align: left;
-  text-indent: 0.01px;
-  text-overflow: ellipsis;
-  transition: background-color 0.2s;
-  vertical-align: middle;
-  white-space: nowrap;
-  .label {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+.footer-nav-right {
+  float: right;
+}
+.footer-social-buttons {
+  display: flex;
+  font-size: 30px;
+  a {
+    transition: all 0.2s ease-in-out;
+    margin-right: 22px;
+    :hover {
+      transform: scale(1.1);
+    }
   }
 }

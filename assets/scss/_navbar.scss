@@ -58,7 +58,7 @@
   &:focus {
     color: #00aeef !important;
   }
-  @media only screen and (max-width: 1153px) {
+  @media only screen and (max-width: 1222px) {
     display: none;
   }
 }
@@ -74,6 +74,9 @@
   i {
     vertical-align: sub;
   }
+  @media only screen and (max-width: 391px) {
+    display: none;
+  }
 }
 .drawer-button-container {
   @media only screen and (min-width: 1153px) {
@@ -83,10 +86,10 @@
 }
 .icon-button-container {
   padding: 8px 0;
-  margin-left: 14px;
+  margin: 0 14px;
 }
 .header-lockup {
-  @media only screen and (max-width: 527px) {
+  @media only screen and (max-width: 631px) {
     display: none;
   }
 }
