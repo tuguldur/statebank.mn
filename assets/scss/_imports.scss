@@ -12,6 +12,8 @@ $mdc-theme-secondary: #000;
 @import "@material/textfield/mdc-text-field";
 @import "@material/button/mdc-button";
 
+@import "@material/data-table/mdc-data-table";
+
 @import "bootstrap";
 @import "navbar";
 @import "drawer";
@@ -20,6 +22,7 @@ $mdc-theme-secondary: #000;
 @import "login";
 @import "footer";
 @import "card";
+@import "currency-rate";
 
 @import "reset";
 @import "@material/menu-surface/mdc-menu-surface";

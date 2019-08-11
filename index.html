@@ -265,42 +265,165 @@
             </div>
          </div>
       </div>
+      <div class="dev-container">
+         <div class="row">
+            <div class="col-xs-12 col-md-6 col-xl-4">
+               <div class="card-title" style="max-width: 240px">
+                  <div class="">
+                     <h3 class="mdc-typography--subtitle2">Ханш</h3>
+                  </div>
+               </div>
+               <div class="mdc-data-table dev-table">
+                  <table class="mdc-data-table__table" aria-label="Dessert calories">
+                     <thead>
+                        <tr class="mdc-data-table__header-row">
+                           <th class="mdc-data-table__header-cell" role="columnheader" scope="col">ВАЛЮТ</th>
+                           <th class="mdc-data-table__header-cell" role="columnheader" scope="col">АВАХ</th>
+                           <th class="mdc-data-table__header-cell" role="columnheader" scope="col">ЗАРАХ</th>
+                        </tr>
+                     </thead>
+                     <tbody class="mdc-data-table__content">
+                        <tr class="mdc-data-table__row">
+                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/us.png')%>"> USD</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">2,667.00</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">2,672.00</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/eu.png')%>">EUR</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">2,960.00</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">3,024.00</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/cn.png')%>"> CNY</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">375.00</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">379.00</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/ru.png')%>"> RUB</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">39.90</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">41.80</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/jp.png')%>"> JPY</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24.96</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">25.53</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/uk.png')%>"> GBP</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">3,203.00</td>
+                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">3,263.00</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="card-title" style="max-width: 240px">
+                  <div class="mt-10">
+                     <button class="mdc-button mdc-button--outlined">Дэлгэрэнгүй</button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-xl-8">
+               <div class="news-tab">
+                  <div class="mdc-tab-bar" role="tablist">
+                     <div class="mdc-tab-scroller">
+                        <div
+                           class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+                           >
+                           <div class="mdc-tab-scroller__scroll-content">
+                              <button
+                                 class="mdc-tab mdc-tab--active"
+                                 role="tab"
+                                 aria-selected="true"
+                                 tabindex="0"
+                                 id="tab-news"
+                                 >
+                              <span class="mdc-tab__content">
+                              <span class="mdc-tab__text-label">Мэдээ</span>
+                              </span>
+                              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                              <span
+                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                                 ></span>
+                              </span>
+                              <span class="mdc-tab__ripple"></span></button
+                                 ><button
+                                 class="mdc-tab"
+                                 role="tab"
+                                 aria-selected="false"
+                                 tabindex="-1"
+                                 id="tab-uramshuulal"
+                                 >
+                              <span class="mdc-tab__content"
+                                 ><span class="mdc-tab__text-label"
+                                 >Урамшуулал</span
+                                 ></span
+                                 ><span class="mdc-tab-indicator"
+                                 ><span
+                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                                 ></span></span
+                                 ><span class="mdc-tab__ripple"></span>
+                              </button>
+                              <button
+                                 class="mdc-tab"
+                                 role="tab"
+                                 aria-selected="false"
+                                 tabindex="-2"
+                                 id="tab-video"
+                                 >
+                              <span class="mdc-tab__content"
+                                 ><span class="mdc-tab__text-label"
+                                 >Дүрст мэдээ</span
+                                 ></span
+                                 ><span class="mdc-tab-indicator"
+                                 ><span
+                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                                 ></span></span
+                                 ><span class="mdc-tab__ripple"></span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
       <div class="main dev-container">
-          <div class="row">
-              <div class="col-md-4">
-                <div class="info">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="info">
                   <div class="icon">
-                      <i class="fas fa-laptop"></i>
+                     <i class="fas fa-laptop"></i>
                   </div>
                   <h4 class="info-title">Цахим үйлчилгээ</h4>
                   <p>Харилцагч та гар утас болон интернэтийн тусламжтайгаар өөрийн дансыг хүссэн үедээ удирдах боломжтой.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="info">
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="info">
                   <div class="icon">
-                      <i class="far fa-credit-card"></i>
+                     <i class="far fa-credit-card"></i>
                   </div>
                   <h4 class="info-title">Карт</h4>
                   <p>Та хүссэн газраасаа интернэтэд холбогдон Төрийн банкны карт авах захиалгаа өгөх боломжтой боллоо. Та Монгол улсаас хандаж байгаа бол өөрт аль ойр салбарыг сонгож картаа захиална уу.  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="info">
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="info">
                   <div class="icon">
-                      <i class="fas fa-landmark"></i>
+                     <i class="fas fa-landmark"></i>
                   </div>
                   <h4 class="info-title">Зээл</h4>
                   <p>Төрийн болон хувийн хэвшлийн байгууллагын ажиллагсдад зориулсан, зээлийн төлбөрөө ирээдүйн цалин, түүнтэй адилтгах нөхөн олговрын орлогоороо эргүүлэн төлөх нөхцөл бүхий зээл юм.</p>
-                </div>
-              </div>
+               </div>
             </div>
+         </div>
       </div>
       <div class="get-bank">
-        <img src="<%=require('./assets/images/bank.jpg')%>" alt="Get Application">
+         <img src="<%=require('./assets/images/bank.jpg')%>" alt="Get Application">
          <div class="get-bank-button-container">
-            <a href="#"><img src="./assets/images/android.png" alt="Download Android" style="width:154px"></a>
-            <a href="#"><img src="./assets/images/apple.png" alt="Download IOS" style="width:154px"></a>
+            <a href="#"><img src="<%=require('./assets/images/android.png')%>" alt="Download Android" style="width:154px"></a>
+            <a href="#"><img src="<%=require('./assets/images/apple.png')%>" alt="Download IOS" style="width:154px"></a>
          </div>
       </div>
       <footer id="footer">
@@ -403,29 +526,28 @@
                   </ul>
                </li>
                <li class="footer-linkbox footer-linkbox-sites">
-                     <h3 class="footer-linkbox-heading">Бидэнтэй холбогдох</h3>
-                     <ul class="footer-linkbox-list">
-                         <li class="footer-linkbox-item">
-                             <span>Утас: <strong>1800-1881</strong></span>
-                         </li>
-                         <li class="footer-linkbox-item">
-                              <a href="mailto:contact@statebank.mn">Имэйл хаяг: contact@statebank.mn</a>
-                           </li>
-                           <h3 class="footer-linkbox-heading mt-10">Хаяг</h3>
-                         <li class="footer-linkbox-item">
-                            <span href="#">ТӨВ САЛБАР: СҮХБААТАР ДҮҮРЭГ, 1-Р ХОРОО, ЧИНГИСИЙН ӨРГӨН ЧӨЛӨӨ 8, “АЛТАЙ БЬЮЛДИНГ” БАРИЛГЫН 2-Р ДАВХАР</span>
-                         </li>
-                         <li class="footer-linkbox-item">
-                              <div class="footer-social-buttons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>  <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-youtube"></i></a>
-                              </div>
-                           </li>
-                           <li class="footer-linkbox-item">
-                                <span>© ТӨРИЙН БАНК</span>
-                              </li>
-                           
-                     </ul>
-                 </li>
+                  <h3 class="footer-linkbox-heading">Бидэнтэй холбогдох</h3>
+                  <ul class="footer-linkbox-list">
+                     <li class="footer-linkbox-item">
+                        <span>Утас: <strong>1800-1881</strong></span>
+                     </li>
+                     <li class="footer-linkbox-item">
+                        <a href="mailto:contact@statebank.mn">Имэйл хаяг: contact@statebank.mn</a>
+                     </li>
+                     <h3 class="footer-linkbox-heading mt-10">Хаяг</h3>
+                     <li class="footer-linkbox-item">
+                        <span href="#">ТӨВ САЛБАР: СҮХБААТАР ДҮҮРЭГ, 1-Р ХОРОО, ЧИНГИСИЙН ӨРГӨН ЧӨЛӨӨ 8, “АЛТАЙ БЬЮЛДИНГ” БАРИЛГЫН 2-Р ДАВХАР</span>
+                     </li>
+                     <li class="footer-linkbox-item">
+                        <div class="footer-social-buttons">
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>  <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                     </li>
+                     <li class="footer-linkbox-item">
+                        <span>© ТӨРИЙН БАНК</span>
+                     </li>
+                  </ul>
+               </li>
             </ul>
          </nav>
       </footer>

@@ -137,3 +137,12 @@ strong {
 .mt-10 {
   margin-top: 10px;
 }
+.text-right {
+  float: right !important;
+}
+.card-title {
+  .mdc-typography--subtitle2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+}
