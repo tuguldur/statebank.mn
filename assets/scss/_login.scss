@@ -8,7 +8,7 @@
   @media (min-width: 486px) {
     min-height: 750px;
     width: 100%;
-    height: 100%;
+    height: calc(80% - 64px);
     max-width: 1080px;
     max-height: 1000px;
     min-height: 650px;
@@ -20,14 +20,14 @@
   @media (min-width: 1080px) {
     min-height: 700px;
     width: 80%;
-    height: 100%;
+    height: calc(80% - 64px);
     overflow: hidden;
   }
 }
 @media (max-width: 486px) {
   #form-container {
     position: absolute;
-    top: -100px;
+    top: -240px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -36,6 +36,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 400px) {
+      top: -135px;
+    }
   }
 }
 @media (min-width: 1080px) {
