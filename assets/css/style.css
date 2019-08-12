@@ -1,0 +1,83 @@
+.dev-nav {
+  background-color: transparent !important;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 99;
+}
+.dev-nav-link {
+  padding: 5px 20px !important;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #fff !important;
+}
+.dev-nav-link i {
+  vertical-align: middle;
+}
+.dev-lang {
+  padding: 0px !important;
+}
+.dev-lang img {
+  max-height: 30px;
+}
+/* slider */
+.dev-slider {
+  position: absolute;
+  top: 0;
+  max-height: 80%;
+}
+.dev-slider .carousel-indicators {
+  left: 0 !important;
+  right: unset;
+}
+.dev-slider .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.h-80vh {
+  max-height: 80vh;
+}
+.dev-slider p {
+  max-width: 500px;
+}
+.dev-slider .carousel-caption {
+  text-align: left;
+  left: 15%;
+  right: unset;
+  bottom: 20%;
+}
+/* Header form */
+#header-form {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 98;
+
+  padding: 10px;
+  background-image: linear-gradient(#0d6990, #0f4686);
+  border-radius: 24px;
+  border: 2px solid #fff;
+}
+.dev-header-form {
+  min-width: 320px;
+  flex-direction: column;
+}
+.dev-header-form input {
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  outline: 0;
+  border: 0;
+}
+.dev-header-form button {
+  border-radius: 20px;
+}
+.form-image {
+  max-width: 150px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.nav-phone {
+  color: #000 !important;
+  background: #fff;
+}

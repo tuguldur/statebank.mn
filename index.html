@@ -1,601 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <link rel="icon" href="assets/images/favicon.ico" />
-      <title>Төрийн банк</title>
-      <link
-         href="https://fonts.googleapis.com/icon?family=Material+Icons"
-         rel="stylesheet"
-         />
-      <script src="https://kit.fontawesome.com/7c470651e7.js"></script>
-      <meta
-         name="keywords"
-         content="Төрийн банк, Bank of Mongolia, Mongolian bank, Statebank of Mongolia, Гялс банк үйлчилгээ, Банкны шилдэг онлайн үйлчилгээ, Mongolian State bank, Smart bank, Смарт Банк, И-Биллинг"
-         />
-      <meta
-         name="description"
-         content="Төрийн банк Танд санхүүгийн үйлчилгээг эрсдэлгүй хүргэнэ."
-         />
-   </head>
-   <body>
-      <div class="main-hero">
-         <!-- Header -->
-         <header id="header">
-            <div class="container d-flex">
-               <div class="drawer-button-container">
-                  <button class="mdc-icon-button material-icons" id="drawer-button">
-                  menu
-                  </button>
-               </div>
-               <div class="header-lockup">
-                  <a href="/">
-                  <img
-                     class="logo"
-                     src="<%=require('./assets/images/logo.png')%>"
-                     />
-                  </a>
-               </div>
-               <div class="header-nav">
-                  <ul class="header-nav-list">
-                     <li>
-                        <a href="#" class="header-nav-link">Иргэд</a>
-                     </li>
-                     <li>
-                        <a href="#" class="header-nav-link">Байгууллага</a>
-                     </li>
-                     <li>
-                        <a href="#" class="header-nav-link">Бидний тухай</a>
-                     </li>
-                     <li>
-                        <a href="#" class="header-nav-link">Шилэн данс</a>
-                     </li>
-                     <li>
-                        <a href="#" class="header-nav-link">Тусламж</a>
-                     </li>
-                     <li>
-                        <a href="#" type="button" class="nav-call-link">
-                        <i class="material-icons">
-                        call
-                        </i>
-                        18001881
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="icon-button-container">
-                  <button class="mdc-icon-button material-icons">
-                  search
-                  </button>
-               </div>
-               <div class="lang-btn-container">
-                  <a class="mdc-button">English</a>
-               </div>
-            </div>
-         </header>
-         <!-- Drawer -->
-         <aside class="mdc-drawer mdc-drawer--modal dev-drawer">
-            <div class="mdc-drawer__content">
-               <nav class="mdc-list">
-                  <span class="side-nav__section-title">Холбоосууд</span>
-                  <ul class="side-nav__menu side-nav__menu--sections">
-                     <li class="side-nav__menu-item drawer-list__item--active">
-                        <a class="side-nav__link" href="#">
-                        Нүүр
-                        </a>
-                     </li>
-                     <li class="side-nav__menu-item">
-                        <a class="side-nav__link" href="#">
-                        Иргэд
-                        </a>
-                     </li>
-                     <li class="side-nav__menu-item">
-                        <a class="side-nav__link" href="#">
-                        Байгууллага
-                        </a>
-                     </li>
-                     <li class="side-nav__menu-item">
-                        <a class="side-nav__link" href="#">
-                        Бидний тухай
-                        </a>
-                     </li>
-                     <li class="side-nav__menu-item">
-                        <a class="side-nav__link" href="#">
-                        Шилэн данс
-                        </a>
-                     </li>
-                     <li class="side-nav__menu-item">
-                        <a class="side-nav__link" href="#">
-                        Тусламж
-                        </a>
-                     </li>
-                  </ul>
-               </nav>
-            </div>
-         </aside>
-         <div class="mdc-drawer-scrim"></div>
-         <!-- Hero -->
-         <div class="left-split">
-            <div id="form-container">
-               <div class="tab-container">
-                  <div class="mdc-tab-bar" role="tablist">
-                     <div class="mdc-tab-scroller">
-                        <div
-                           class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
-                           >
-                           <div class="mdc-tab-scroller__scroll-content">
-                              <button
-                                 class="mdc-tab mdc-tab--active"
-                                 role="tab"
-                                 aria-selected="true"
-                                 tabindex="0"
-                                 id="btn-bank"
-                                 >
-                              <span class="mdc-tab__content">
-                              <span class="mdc-tab__text-label">ГЯЛС БАНК</span>
-                              </span>
-                              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                              <span
-                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                                 ></span>
-                              </span>
-                              <span class="mdc-tab__ripple"></span></button
-                                 ><button
-                                 class="mdc-tab"
-                                 role="tab"
-                                 aria-selected="false"
-                                 tabindex="-1"
-                                 id="btn-e-billing"
-                                 >
-                              <span class="mdc-tab__content"
-                                 ><span class="mdc-tab__text-label"
-                                 >И-БИЛЛИНГ</span
-                                 ></span
-                                 ><span class="mdc-tab-indicator"
-                                 ><span
-                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                                 ></span></span
-                                 ><span class="mdc-tab__ripple"></span>
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="tab-bank">
-                     <div class="input-container">
-                        <div
-                           class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
-                           >
-                           <i class="material-icons mdc-text-field__icon"
-                              >account_circle</i
-                              >
-                           <input class="mdc-text-field__input" />
-                           <div class="mdc-notched-outline">
-                              <div class="mdc-notched-outline__leading"></div>
-                              <div class="mdc-notched-outline__notch">
-                                 <label class="mdc-floating-label">Нэвтрэх нэр</label>
-                              </div>
-                              <div class="mdc-notched-outline__trailing"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="input-container help-btn">
-                        <a href="#" class="mdc-button">ГАРЫН АВЛАГА</a>
-                     </div>
-                     <div class="input-container">
-                        <a href="#" class="mdc-button">НУУЦ ҮГ СЭРГЭЭХ</a>
-                        <div class="f-s"></div>
-                        <button class="mdc-button mdc-button--raised">Нэвтрэх</button>
-                     </div>
-                  </div>
-                  <div id="tab-e-billing" class="d-none">
-                     <div class="input-container">
-                        <div
-                           class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
-                           >
-                           <i class="material-icons mdc-text-field__icon"
-                              >account_circle</i
-                              >
-                           <input class="mdc-text-field__input" />
-                           <div class="mdc-notched-outline">
-                              <div class="mdc-notched-outline__leading"></div>
-                              <div class="mdc-notched-outline__notch">
-                                 <label class="mdc-floating-label">Нэвтрэх нэр</label>
-                              </div>
-                              <div class="mdc-notched-outline__trailing"></div>
-                           </div>
-                        </div>
-                        <div
-                           class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon"
-                           >
-                           <i class="material-icons mdc-text-field__icon">lock</i>
-                           <input class="mdc-text-field__input" />
-                           <div class="mdc-notched-outline">
-                              <div class="mdc-notched-outline__leading"></div>
-                              <div class="mdc-notched-outline__notch">
-                                 <label class="mdc-floating-label">Нууц үг</label>
-                              </div>
-                              <div class="mdc-notched-outline__trailing"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="input-container help-btn">
-                        <a href="#" class="mdc-button">ШИНЭ ХЭРЭГЛЭГЧ БОЛОХ</a>
-                        <div class="f-s"></div>
-                        <a href="#" class="mdc-button">ТУСЛАМЖ</a>
-                     </div>
-                     <div class="input-container">
-                        <a href="#" class="mdc-button">НУУЦ ҮГ СЭРГЭЭХ</a>
-                        <div class="f-s"></div>
-                        <button class="mdc-button mdc-button--raised">Нэвтрэх</button>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div id="social-buttons"> <a href="#"><i class="fab fa-facebook-f"></i></a>  <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-youtube"></i></a></div>
-         <div class="side-options">
-            <div>
-               <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-                  <i class="fas fa-calculator"></i>
-                  <div class="sh-side-options-hover">Зээлийн<span></span>тооцоолуур</div>
-               </a>
-               <div class="sh-side-options-divider"></div>
-               <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-                  <i class="fas fa-user-alt"></i>
-                  <div class="sh-side-options-hover">Онлайн<span></span>туслах</div>
-               </a>
-               <div class="sh-side-options-divider"></div>
-               <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-                  <i class="fas fa-map-marked-alt"></i>
-                  <div class="sh-side-options-hover">Хаяг,<span></span>байршил</div>
-               </a>
-               <div class="sh-side-options-divider"></div>
-               <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-                  <i class="fas fa-comments"></i>
-                  <div class="sh-side-options-hover">Санал<span></span>хүсэлт</div>
-               </a>
-               <div class="sh-side-options-divider"></div>
-               <a href="#" class="sh-side-options-item sh-accent-color" id="scroll-top">
-                  <i class="fas fa-arrow-circle-up"></i>
-                  <div class="sh-side-options-hover">Дээш<span></span>буцах</div>
-               </a>
-            </div>
-         </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="./dist/js/jquery-3.4.1.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./dist/js/jquery.touchSwipe.min.js"></script>
+    <title>Төрийн банк</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light dev-nav">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo.png" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse align-items-center"
+        id="navbarResponsive"
+      >
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item mr-3">
+            <a class="nav-link dev-nav-link dev-lang" href=""
+              ><img src="./assets/images/mn.png" alt="Монгол хэл"
+            /></a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link dev-nav-link dev-lang" href="">
+              <img src="./assets/images/en.png" alt="Switch to English" />
+            </a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link dev-nav-link" href="">Иргэд</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link dev-nav-link" href="">Байгууллага</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link dev-nav-link nav-phone" href="">
+              <i class="material-icons">phone</i> 18001881</a
+            >
+          </li>
+        </ul>
       </div>
-      <div class="dev-container">
-         <div class="row">
-            <div class="col-xs-12 col-md-6 col-xl-4">
-               <div class="card-title" style="max-width: 240px">
-                  <div class="">
-                     <h3 class="mdc-typography--subtitle2">Ханш</h3>
-                  </div>
-               </div>
-               <div class="mdc-data-table dev-table">
-                  <table class="mdc-data-table__table" aria-label="Currency Rate Mini">
-                     <thead>
-                        <tr class="mdc-data-table__header-row">
-                           <th class="mdc-data-table__header-cell" role="columnheader" scope="col">ВАЛЮТ</th>
-                           <th class="mdc-data-table__header-cell" role="columnheader" scope="col">АВАХ</th>
-                           <th class="mdc-data-table__header-cell" role="columnheader" scope="col">ЗАРАХ</th>
-                        </tr>
-                     </thead>
-                     <tbody class="mdc-data-table__content">
-                        <tr class="mdc-data-table__row">
-                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/us.png')%>"> USD</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">2,667.00</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">2,672.00</td>
-                        </tr>
-                        <tr class="mdc-data-table__row">
-                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/eu.png')%>">EUR</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">2,960.00</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">3,024.00</td>
-                        </tr>
-                        <tr class="mdc-data-table__row">
-                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/cn.png')%>"> CNY</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">375.00</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">379.00</td>
-                        </tr>
-                        <tr class="mdc-data-table__row">
-                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/ru.png')%>"> RUB</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">39.90</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">41.80</td>
-                        </tr>
-                        <tr class="mdc-data-table__row">
-                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/jp.png')%>"> JPY</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24.96</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">25.53</td>
-                        </tr>
-                        <tr class="mdc-data-table__row">
-                           <td class="mdc-data-table__cell"><img width="24" src="<%=require('./assets/images/flags/uk.png')%>"> GBP</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">3,203.00</td>
-                           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">3,263.00</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               <div class="card-title" style="max-width: 240px">
-                  <div class="mt-10">
-                     <a href="#" class="mdc-button mdc-button--outlined">Дэлгэрэнгүй</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xs-12 col-md-6 col-xl-8">
-               <div class="news-tab">
-                  <div class="mdc-tab-bar" role="tablist">
-                     <div class="mdc-tab-scroller">
-                        <div
-                           class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
-                           >
-                           <div class="mdc-tab-scroller__scroll-content">
-                              <button
-                                 class="mdc-tab mdc-tab--active"
-                                 role="tab"
-                                 aria-selected="true"
-                                 tabindex="0"
-                                 id="tab-news-btn"
-                                 >
-                              <span class="mdc-tab__content">
-                              <span class="mdc-tab__text-label">Мэдээ</span>
-                              </span>
-                              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                              <span
-                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                                 ></span>
-                              </span>
-                              <span class="mdc-tab__ripple"></span></button
-                                 ><button
-                                 class="mdc-tab"
-                                 role="tab"
-                                 aria-selected="false"
-                                 tabindex="-1"
-                                 id="tab-uramshuulal-btn"
-                                 >
-                              <span class="mdc-tab__content"
-                                 ><span class="mdc-tab__text-label"
-                                 >Урамшуулал</span
-                                 ></span
-                                 ><span class="mdc-tab-indicator"
-                                 ><span
-                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                                 ></span></span
-                                 ><span class="mdc-tab__ripple"></span>
-                              </button>
-                              <button
-                                 class="mdc-tab"
-                                 role="tab"
-                                 aria-selected="false"
-                                 tabindex="-2"
-                                 id="tab-video-btn"
-                                 >
-                              <span class="mdc-tab__content"
-                                 ><span class="mdc-tab__text-label"
-                                 >Дүрст мэдээ</span
-                                 ></span
-                                 ><span class="mdc-tab-indicator"
-                                 ><span
-                                 class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                                 ></span></span
-                                 ><span class="mdc-tab__ripple"></span>
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="tab-news">
-                     <div class="d-flex">
-                           <div class="news-card">
-                              <div class="border">
-                                 <a href="#">
-                                    <div class="card-image">
-                                       <div class="image-container">
-                                          <div>
-                                             <img id="dimg_9" src="data:image/jpeg;base64,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" class="rISBZc M4dUYb" height="115" width="205" alt="" data-atf="3">
-                                          </div>
-                                       </div>
-                                      
-                                    </div>
-                                    <div class="card-title">
-                                       <div>The Flash Season 6 Teaser - Arrow Crisis On Infinite Earths Scenes ...</div>
-                                    </div>
-                                 </a>
-                                 <div class="card-footer">
-                                    <div>2 цагийн өмнө</div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="news-card">
-                              <div class="border">
-                                 <a href="#">
-                                    <div class="card-image">
-                                       <div class="image-container">
-                                          <div>
-                                             <img id="dimg_9" src="data:image/jpeg;base64,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" class="rISBZc M4dUYb" height="115" width="205" alt="" data-atf="3">
-                                          </div>
-                                       </div>
-                                      
-                                    </div>
-                                    <div class="card-title">
-                                       <div>The Flash Season 6 Teaser - Arrow Crisis On Infinite Earths Scenes ...</div>
-                                    </div>
-                                 </a>
-                                 <div class="card-footer">
-                                    <div>2 цагийн өмнө</div>
-                                 </div>
-                              </div>
-                           </div>
-                     </div>
-                  </div>
-                  <div id="tab-uramshuulal" style="display: none">uramshuulal</div>
-                  <div id="tab-video" style="display: none">videos</div>
-               </div>
-            </div>
-         </div>
+    </nav>
+    <!-- Header Form -->
+    <div id="header-form">
+      <form action="/" method="POST" class="d-flex dev-header-form">
+        <div>
+          <img
+            src="./assets/images/gyalsbank.png"
+            alt="gyalsbank"
+            class="form-image"
+          />
+        </div>
+        <input type="text" name="username" placeholder="Нэвтрэх нэр" />
+        <input type="password" name="password" placeholder="Нууц үг" />
+        <button type="submit" class="btn btn-success">Нэвтрэх</button>
+      </form>
+    </div>
+    <!-- Header Slider -->
+    <div
+      id="headerCarousel"
+      class="carousel slide carousel-fade dev-slider"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#headerCarousel" data-slide-to="1"></li>
+        <li data-target="#headerCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100 h-80vh"
+            src="https://initiate.alphacoders.com/images/979/stretched-1920-1080-979101.jpg?5172"
+            alt="First slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              Lorem ipsum dolor
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+              cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
+              excepturi commodi aspernatur fuga vero ullam iste labore
+              voluptatum quod. Sapiente, illum nihil.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100 h-80vh"
+            src="https://initiate.alphacoders.com/images/981/stretched-1920-1080-981731.jpg?1938"
+            alt="Second slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              Lorem ipsum dolor
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+              cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
+              excepturi commodi aspernatur fuga vero ullam iste labore
+              voluptatum quod. Sapiente, illum nihil.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100 h-80vh"
+            src="https://www.iamag.co/wp-content/uploads/2017/07/yourname-background29.jpeg"
+            alt="Third slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              Lorem ipsum dolor
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+              cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
+              excepturi commodi aspernatur fuga vero ullam iste labore
+              voluptatum quod. Sapiente, illum nihil.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="main dev-container">
-         <div class="row">
-            <div class="col-md-4">
-               <div class="info">
-                  <div class="icon">
-                     <i class="fas fa-laptop"></i>
-                  </div>
-                  <h4 class="info-title">Цахим үйлчилгээ</h4>
-                  <p>Харилцагч та гар утас болон интернэтийн тусламжтайгаар өөрийн дансыг хүссэн үедээ удирдах боломжтой.</p>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="info">
-                  <div class="icon">
-                     <i class="far fa-credit-card"></i>
-                  </div>
-                  <h4 class="info-title">Карт</h4>
-                  <p>Та хүссэн газраасаа интернэтэд холбогдон Төрийн банкны карт авах захиалгаа өгөх боломжтой боллоо. Та Монгол улсаас хандаж байгаа бол өөрт аль ойр салбарыг сонгож картаа захиална уу.  </p>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="info">
-                  <div class="icon">
-                     <i class="fas fa-landmark"></i>
-                  </div>
-                  <h4 class="info-title">Зээл</h4>
-                  <p>Төрийн болон хувийн хэвшлийн байгууллагын ажиллагсдад зориулсан, зээлийн төлбөрөө ирээдүйн цалин, түүнтэй адилтгах нөхөн олговрын орлогоороо эргүүлэн төлөх нөхцөл бүхий зээл юм.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="get-bank">
-         <img src="<%=require('./assets/images/bank.jpg')%>" alt="Get Application">
-         <div class="get-bank-button-container">
-            <a href="#"><img src="<%=require('./assets/images/android.png')%>" alt="Download Android" style="width:154px"></a>
-            <a href="#"><img src="<%=require('./assets/images/apple.png')%>" alt="Download IOS" style="width:154px"></a>
-         </div>
-      </div>
-      <footer id="footer">
-         <nav class="footer-nav">
-            <ul class="footer-nav-list">
-               <li class="footer-linkbox">
-                  <h3 class="footer-linkbox-heading">Төрийн Банкны тухай</h3>
-                  <ul class="footer-linkbox-list">
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Танилцуулга
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Эрхэм зорилго
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Удирдлагын баг
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Хувьцаа эзэмшигч
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Санхүүгийн үзүүлэлт
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Санхүү, Бүртгэл тооцоо,Дотоод хяналт
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Хувийн ашиг сонирхолын мэдүүлэг болон хөрөнгө, орлогын
-                        мэдүүлэг
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Хууль эрх зүй
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Комплаенс
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="footer-linkbox">
-                  <h3 class="footer-linkbox-heading">Заавар</h3>
-                  <ul class="footer-linkbox-list">
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Байрны төлбөр төлөх
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Тогны төлбөр төлөх
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Утасны төлбөр төлөх
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Гялс банкаар гүйлгээ хийх
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Гялс банкаар ATM байршил харах
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="footer-linkbox">
-                  <h3 class="footer-linkbox-heading">Ажлын байр</h3>
-                  <ul class="footer-linkbox-list">
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Нээлттэй ажлын байр
-                        </a>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="#">
-                        Онлайн анкэт бөглөх
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="footer-linkbox footer-linkbox-sites">
-                  <h3 class="footer-linkbox-heading">Бидэнтэй холбогдох</h3>
-                  <ul class="footer-linkbox-list">
-                     <li class="footer-linkbox-item">
-                        <span>Утас: <strong>1800-1881</strong></span>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <a href="mailto:contact@statebank.mn">Имэйл хаяг: contact@statebank.mn</a>
-                     </li>
-                     <h3 class="footer-linkbox-heading mt-10">Хаяг</h3>
-                     <li class="footer-linkbox-item">
-                        <span href="#">ТӨВ САЛБАР: СҮХБААТАР ДҮҮРЭГ, 1-Р ХОРОО, ЧИНГИСИЙН ӨРГӨН ЧӨЛӨӨ 8, “АЛТАЙ БЬЮЛДИНГ” БАРИЛГЫН 2-Р ДАВХАР</span>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <div class="footer-social-buttons">
-                           <a href="#"><i class="fab fa-facebook-f"></i></a>  <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                     </li>
-                     <li class="footer-linkbox-item">
-                        <span>© ТӨРИЙН БАНК</span>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-         </nav>
-      </footer>
-   </body>
+    </div>
+    <!-- Side Buttons -->
+    <div id="side-buttons"></div>
+    <script type="text/javascript">
+      $("#headerCarousel").swipe({
+        swipe: function(
+          event,
+          direction,
+          distance,
+          duration,
+          fingerCount,
+          fingerData
+        ) {
+          if (direction == "left") $(this).carousel("next");
+          if (direction == "right") $(this).carousel("prev");
+        },
+        allowPageScroll: "vertical"
+      });
+    </script>
+  </body>
 </html>
