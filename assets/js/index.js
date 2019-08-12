@@ -4,6 +4,7 @@ import { MDCDrawer } from "@material/drawer";
 import "./init";
 import "./drawer";
 import "./card";
+import "./homeNews";
 import "../scss/index.scss";
 // import "bootstrap/js/bootstrap.min.js";
 const drawer = MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
