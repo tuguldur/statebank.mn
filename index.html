@@ -52,18 +52,19 @@
           <li class="nav-item mr-3">
             <a class="nav-link dev-nav-link" href="">Иргэд</a>
           </li>
-          <li class="nav-item mr-3">
+          <li class="nav-item mr-5">
             <a class="nav-link dev-nav-link" href="">Байгууллага</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link dev-nav-link nav-phone" href="">
-              <i class="material-icons">phone</i> 18001881</a
+              <img src="./assets/images/phone-call.png" alt="Call"> 18001881</a
             >
           </li>
         </ul>
       </div>
     </nav>
+    <!-- Slider -->
     <div>
       <!-- Header Form -->
       <div id="header-form">
@@ -98,8 +99,8 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              class="d-block w-100 h-80vh"
-              src="/assets/images/slide1.jpg"
+              class="d-block w-100"
+              src="/assets/images/slide/slide.jpg"
               alt="First slide"
             />
             <div class="carousel-caption d-none d-md-block">
@@ -116,8 +117,8 @@
           </div>
           <div class="carousel-item">
             <img
-              class="d-block w-100 h-80vh"
-              src="/assets/images/slide2.jpg"
+              class="d-block w-100"
+              src="/assets/images/slide/slide.jpg"
               alt="Second slide"
             />
             <div class="carousel-caption d-none d-md-block">
@@ -134,8 +135,8 @@
           </div>
           <div class="carousel-item">
             <img
-              class="d-block w-100 h-80vh"
-              src="/assets/images/slide3.jpeg"
+              class="d-block w-100"
+              src="/assets/images/slide/slide.jpg"
               alt="Third slide"
             />
             <div class="carousel-caption d-none d-md-block">
@@ -154,48 +155,78 @@
       </div>
     </div>
     <!-- Side Buttons -->
-    <div class="side-options">
-      <div>
-        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-          <i class="fas fa-calculator"></i>
-          <div class="sh-side-options-hover">
-            Зээлийн<span></span>тооцоолуур
-          </div>
+    <div class="helpboxnew him">
+        <a class="" href="/w/mn/loancalc">
+            <div class="side-link-container">
+                <img src="assets/images/logo/1.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text">Зээлийн тооцоолуур</span>
+            </div>
         </a>
-        <div class="sh-side-options-divider"></div>
-        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-          <i class="fas fa-user-alt"></i>
-          <div class="sh-side-options-hover">Онлайн<span></span>туслах</div>
+        <a href="/w/mn/savecalc" title="Хадгаламжийн тооцоолуур">
+            <div class="side-link-container">
+              <img src="assets/images/logo/2.png" alt="Зээлийн тооцоолуур" class="side-logo">
+              <span class="side-link-text">Хадгаламжийн тооцоолуур</span>
+            </div>
         </a>
-        <div class="sh-side-options-divider"></div>
-        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-          <i class="fas fa-map-marked-alt"></i>
-          <div class="sh-side-options-hover">Хаяг,<span></span>байршил</div>
+        <a class="hansh-hurvuulegch" href="/w/mn/hanshcalc" title="Ханшийн мэдээ">
+            <div class="side-link-container">
+                <img src="assets/images/logo/3.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text">Ханшийн мэдээ</span>
+            </div>
         </a>
-        <div class="sh-side-options-divider"></div>
-        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
-          <i class="fas fa-comments"></i>
-          <div class="sh-side-options-hover">Санал<span></span>хүсэлт</div>
+        <a class="halamj-shalgah" href="/w/mn/onlinepension" title="Халамжийн мэдээ">
+            <div class="side-link-container">
+              <img src="assets/images/logo/4.png" alt="Зээлийн тооцоолуур" class="side-logo">
+              <span class="side-link-text">Халамжийн мэдээ</span>
+            </div>
         </a>
-        <div class="sh-side-options-divider"></div>
-        <a
-          href="#"
-          class="sh-side-options-item sh-accent-color"
-          id="scroll-top"
-        >
-          <i class="fas fa-arrow-circle-up"></i>
-          <div class="sh-side-options-hover">Дээш<span></span>буцах</div>
+        <a class="online-tuslah" onclick="window.open('/phplive/phplive.php?d=0&amp;onpage=livechatimagelink&amp;title=Live+Chat+Direct+Link', 'blank', 'toolbar=no, scrollbars=no, resizable=yes, width=700, height=480');" href="javascript:void(0)" title="Онлайн туслах">
+            <div class="side-link-container">
+                <img src="assets/images/logo/5.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text">Онлайн туслах</span>
+              </div>
         </a>
-      </div>
-    </div>
+        <a class="online-sanal" onclick="window.open('/contact/contactUs.php', 'blank', 'toolbar=no, scrollbars=no, resizable=no, width=652, height=687');" href="javascript:void(0)" title="Санал хүсэлт">
+            <div class="side-link-container">
+                <img src="assets/images/logo/6.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text">Санал хүсэлт</span>
+              </div>
+        </a>
+        <a class="location-icon" href="/w/mn/contactus/salbar" title="Хаяг, байршил">
+            <div class="side-link-container">
+              <img src="assets/images/logo/7.png" alt="Зээлийн тооцоолуур" class="side-logo">
+              <span class="side-link-text">Хаяг, байршил</span>
+            </div>
+        </a>
+        <a class="tiwtter-icon" href="http://twitter.com/StatebankMN" target="_blank" title="Twitter">
+            <div class="side-link-container">
+                <img src="assets/images/logo/twitter.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text text-i">Twitter</span>
+              </div>
+        </a>
+        <a class="facebook-icon" href="http://www.facebook.com/StatebankMN" target="_blank" title="Facebook">
+            <div class="side-link-container">
+                <img src="assets/images/logo/facebook.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text text-i">Facebook</span>
+              </div>
+        </a>
+        <a class="youtube-icon" href="https://www.youtube.com/user/StatebankMN/feed" target="_blank" title="Youtube">
+            <div class="side-link-container">
+                <img src="assets/images/logo/youtube.png" alt="Зээлийн тооцоолуур" class="side-logo">
+                <span class="side-link-text text-i">Youtube</span>
+            </div>
+        </a>
+        </div>
     <!-- second container -->
-    <div>
+    <div class="pt-3 bg-brand">
       <div class="section-header-title">
         <h3>Цэс</h3>
       </div>
       <div class="row dev-container">
         <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-          <div class="gradient-box"></div>
+          <div class="gradient-box">
+            <img src="./assets/images/big-logo/computer.png" alt="Цахим Үйлчилгээ">
+          </div>
           <div
             class="card-title text-center mt-3 text-brand-hover font-weight-bold"
           >
@@ -203,7 +234,9 @@
           </div>
         </div>
         <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-          <div class="gradient-box"></div>
+          <div class="gradient-box">
+              <img src="./assets/images/big-logo/piggy-bank.png" alt="Хадгаламж">
+          </div>
           <div
             class="card-title text-center mt-3 text-brand-hover font-weight-bold"
           >
@@ -211,7 +244,9 @@
           </div>
         </div>
         <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-          <div class="gradient-box"></div>
+          <div class="gradient-box">
+              <img src="./assets/images/big-logo/business-and-finance.png" alt="Хадгаламж">
+          </div>
           <div
             class="card-title text-center mt-3 text-brand-hover font-weight-bold"
           >
@@ -219,7 +254,9 @@
           </div>
         </div>
         <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-          <div class="gradient-box"></div>
+          <div class="gradient-box">
+              <img src="./assets/images/big-logo/id-card.png" alt="Хадгаламж">  
+          </div>
           <div
             class="card-title text-center mt-3 text-brand-hover font-weight-bold"
           >
@@ -238,7 +275,7 @@
         </div>
       </div>
     </div>
-    <!-- 3rd container -->
+    <!-- 3rd container Slider-->
     <div class="w-100">
       <div
         id="carouselHome"
@@ -252,19 +289,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-              width="1000"
-              height="600"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: First slide"
-            >
-              <rect fill="#777" width="100%" height="100%"></rect>
-              <text fill="#555" dy=".3em" x="50%" y="50%">First slide</text>
-            </svg>
+            <img src="./assets/images/slide/second-slider.jpg" alt="Slider" class="w-100">
             <div class="carousel-caption">
               <div class="d-none d-md-block">
                 <h3 class="text-white">
@@ -285,19 +310,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-              width="1000"
-              height="600"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: Second slide"
-            >
-              <rect fill="#666" width="100%" height="100%"></rect>
-              <text fill="#444" dy=".3em" x="50%" y="50%">Second slide</text>
-            </svg>
+              <img src="./assets/images/slide/second-slider.jpg" alt="Slider" class="w-100">
             <div class="carousel-caption">
               <div class="d-none d-md-block">
                 <h3 class="text-white">
@@ -318,19 +331,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-              width="1000"
-              height="600"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: Third slide"
-            >
-              <rect fill="#555" width="100%" height="100%"></rect>
-              <text fill="#333" dy=".3em" x="50%" y="50%">Third slide</text>
-            </svg>
+              <img src="./assets/images/slide/second-slider.jpg" alt="Slider" class="w-100">
             <div class="carousel-caption">
               <div class="d-none d-md-block">
                 <h3 class="text-white">
@@ -372,7 +373,7 @@
       </div>
     </div>
     <!-- 4th container -->
-    <div class="pb-5">
+    <div class="pb-5 bg-brand">
       <div class="w-100 dev-right-container">
         <div class="section-header-title-right">
           <h3>Мэдээ Мэдээлэл</h3>
@@ -383,7 +384,7 @@
           <div class="brand-card">
             <a href="" class="text-brand">
               <div class="brand-card-image">
-                <img src="assets/images/card-image.svg" alt="card image" />
+                <img src="assets/images/card-image.png" alt="card image" />
               </div>
               <div class="brand-card-title mt-2">
                 <h5>Lorem ipsum dolor sit</h5>
@@ -405,180 +406,306 @@
           </div>
         </div>
         <div class="col-lg-3 col-sm-6">
-            <div class="brand-card">
-              <a href="" class="text-brand">
-                <div class="brand-card-image">
-                  <img src="assets/images/card-image.svg" alt="card image" />
-                </div>
-                <div class="brand-card-title mt-2">
-                  <h5>Lorem ipsum dolor sit</h5>
-                </div>
-              </a>
-              <div class="spec-s"></div>
-              <div class="brand-card-desc">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                  error aperiam placeat odio tempora natus, itaque eaque dolorem
-                  fugiat libero magni hic dignissimos, voluptatum cum ea quasi
-                  recusandae, unde corrupti.
-                </p>
+          <div class="brand-card">
+            <a href="" class="text-brand">
+              <div class="brand-card-image">
+                <img src="assets/images/card-image.png" alt="card image" />
               </div>
-              <div class="spec-s mb-0"></div>
-              <div class="brand-card-footer text-right pr-1">
-                <small>2019/8/13 12:55pm</small>
+              <div class="brand-card-title mt-2">
+                <h5>Lorem ipsum dolor sit</h5>
               </div>
+            </a>
+            <div class="spec-s"></div>
+            <div class="brand-card-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                error aperiam placeat odio tempora natus, itaque eaque dolorem
+                fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                recusandae, unde corrupti.
+              </p>
+            </div>
+            <div class="spec-s mb-0"></div>
+            <div class="brand-card-footer text-right pr-1">
+              <small>2019/8/13 12:55pm</small>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
-              <div class="brand-card">
-                <a href="" class="text-brand">
-                  <div class="brand-card-image">
-                    <img src="assets/images/card-image.svg" alt="card image" />
-                  </div>
-                  <div class="brand-card-title mt-2">
-                    <h5>Lorem ipsum dolor sit</h5>
-                  </div>
-                </a>
-                <div class="spec-s"></div>
-                <div class="brand-card-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                    error aperiam placeat odio tempora natus, itaque eaque dolorem
-                    fugiat libero magni hic dignissimos, voluptatum cum ea quasi
-                    recusandae, unde corrupti.
-                  </p>
-                </div>
-                <div class="spec-s mb-0"></div>
-                <div class="brand-card-footer text-right pr-1">
-                  <small>2019/8/13 12:55pm</small>
-                </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="brand-card">
+            <a href="" class="text-brand">
+              <div class="brand-card-image">
+                <img src="assets/images/card-image.png" alt="card image" />
               </div>
+              <div class="brand-card-title mt-2">
+                <h5>Lorem ipsum dolor sit</h5>
+              </div>
+            </a>
+            <div class="spec-s"></div>
+            <div class="brand-card-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                error aperiam placeat odio tempora natus, itaque eaque dolorem
+                fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                recusandae, unde corrupti.
+              </p>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="brand-card">
-                  <a href="" class="text-brand">
-                    <div class="brand-card-image">
-                      <img src="assets/images/card-image.svg" alt="card image" />
-                    </div>
-                    <div class="brand-card-title mt-2">
-                      <h5>Lorem ipsum dolor sit</h5>
-                    </div>
-                  </a>
-                  <div class="spec-s"></div>
-                  <div class="brand-card-desc">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                      error aperiam placeat odio tempora natus, itaque eaque dolorem
-                      fugiat libero magni hic dignissimos, voluptatum cum ea quasi
-                      recusandae, unde corrupti.
-                    </p>
-                  </div>
-                  <div class="spec-s mb-0"></div>
-                  <div class="brand-card-footer text-right pr-1">
-                    <small>2019/8/13 12:55pm</small>
-                  </div>
-                </div>
+            <div class="spec-s mb-0"></div>
+            <div class="brand-card-footer text-right pr-1">
+              <small>2019/8/13 12:55pm</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="brand-card">
+            <a href="" class="text-brand">
+              <div class="brand-card-image">
+                <img src="assets/images/card-image.png" alt="card image" />
               </div>
+              <div class="brand-card-title mt-2">
+                <h5>Lorem ipsum dolor sit</h5>
+              </div>
+            </a>
+            <div class="spec-s"></div>
+            <div class="brand-card-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                error aperiam placeat odio tempora natus, itaque eaque dolorem
+                fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                recusandae, unde corrupti.
+              </p>
+            </div>
+            <div class="spec-s mb-0"></div>
+            <div class="brand-card-footer text-right pr-1">
+              <small>2019/8/13 12:55pm</small>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- 5th container -->
     <div class="w-100 row">
-        <div class="section-header-title col-xl-3">
-            <h3>Ханш</h3>
+      <div class="section-header-title col-xl-3 mt-10">
+        <h3>Ханш</h3>
+      </div>
+      <div class="currency-rate col-xl-9">
+        <div class="currency-rate-container">
+          <div>
+            <img src="./assets/images/flags/us.png" alt="USD" />
+            <span>USD</span>
+            <span class="ml-3 mr-3">2,662.00</span>
+            <span class="mr-3">2,672.00</span>
           </div>
-          <div class="currency-rate col-xl-9">
-            <div class="currency-rate-container">
-            <div>
-              <img src="./assets/images/flags/us.png" alt="USD">
-                <span>USD</span>
-                <span class="ml-3 mr-3">2,662.00</span>
-                <span class="mr-3">2,672.00</span>
-            </div>
-            <div>
-                <img src="./assets/images/flags/cn.png" alt="USD">
-                  <span>CNY</span>
-                  <span class="ml-3 mr-3">385.50</span>
-                  <span class="mr-3">388.50</span>
-              </div>
-              <div>
-                  <img src="./assets/images/flags/ru.png" alt="USD">
-                    <span>RUB</span>
-                    <span class="ml-3 mr-3">41.49</span>
-                    <span class="mr-3">43.40</span>
-                </div>
-                <div>
-                    <img src="./assets/images/flags/us.png" alt="USD">
-                      <span>EUR</span>
-                      <span class="ml-3 mr-3">2,957.00</span>
-                      <span class="mr-3">3,016.00</span>
-                  </div>
-                  <div>
-                      <img src="./assets/images/flags/jp.png" alt="USD">
-                        <span>JPY</span>
-                        <span class="ml-3 mr-3">25.01</span>
-                        <span class="mr-3">25.53</span>
-                    </div>
-                    <div>
-                        <img src="./assets/images/flags/gbp.png" alt="USD">
-                          <span>GBP</span>
-                          <span class="ml-3 mr-3">3,190.00</span>
-                          <span class="mr-3">3,274.00</span>
-                    </div>
-            </div>
+          <div>
+            <img src="./assets/images/flags/cn.png" alt="USD" />
+            <span>CNY</span>
+            <span class="ml-3 mr-3">385.50</span>
+            <span class="mr-3">388.50</span>
           </div>
-    </div>
-    <div class="bg-section-brand">
-        <div class="row dev-container">
-          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-            <div class="gradient-box"></div>
-            <div
-              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
-            >
-              <span>Шилэн Данс</span>
-            </div>
+          <div>
+            <img src="./assets/images/flags/ru.png" alt="USD" />
+            <span>RUB</span>
+            <span class="ml-3 mr-3">41.49</span>
+            <span class="mr-3">43.40</span>
           </div>
-          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-            <div class="gradient-box"></div>
-            <div
-              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
-            >
-              <span>Тендер</span>
-            </div>
+          <div>
+            <img src="./assets/images/flags/us.png" alt="USD" />
+            <span>EUR</span>
+            <span class="ml-3 mr-3">2,957.00</span>
+            <span class="mr-3">3,016.00</span>
           </div>
-          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-            <div class="gradient-box"></div>
-            <div
-              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
-            >
-              <span>Мэдээлэлийн аюулгүй байдал</span>
-            </div>
+          <div>
+            <img src="./assets/images/flags/jp.png" alt="USD" />
+            <span>JPY</span>
+            <span class="ml-3 mr-3">25.01</span>
+            <span class="mr-3">25.53</span>
           </div>
-          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
-            <div class="gradient-box"></div>
-            <div
-              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
-            >
-              <span>Бусад</span>
-            </div>
-          </div>
-          <div class="mt-5 mb-5 text-white">
-            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
-            <div class="spec"></div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vel
-              laudantium, dicta perferendis nostrum exercitationem, fuga
-              consequuntur hic delectus ullam, modi sint fugiat quia ab sunt
-              praesentium aliquid voluptatum laborum.
-            </p>
+          <div>
+            <img src="./assets/images/flags/gbp.png" alt="USD" />
+            <span>GBP</span>
+            <span class="ml-3 mr-3">3,190.00</span>
+            <span class="mr-3">3,274.00</span>
           </div>
         </div>
       </div>
-      <!-- 6th container -->
-    <div class="dev-container row">
-      <div class="col-xl-6 text-center text-uppercase">1</div>
-      <div class="spec-v"></div>
-      <div class="col-xl-6 text-center">1</div>
     </div>
+    <div class="bg-section-brand">
+      <div class="row dev-container">
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box">
+            <img src="./assets/images/big-logo/online-security.png" alt="Шилэн Данс">
+          </div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Шилэн Данс</span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box">
+              <img src="./assets/images/big-logo/briefcase.png" alt="Тендер">
+          </div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Тендер</span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box">
+              <img src="./assets/images/big-logo/secure-shield.png" alt="Мэдээлэлийн аюулгүй байдал">
+          </div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Мэдээлэлийн аюулгүй байдал</span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box">
+              <img src="./assets/images/big-logo/border.png" alt="Бусад">
+          </div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Бусад</span>
+          </div>
+        </div>
+        <div class="mt-5 mb-5 text-white">
+          <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+          <div class="spec"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vel
+            laudantium, dicta perferendis nostrum exercitationem, fuga
+            consequuntur hic delectus ullam, modi sint fugiat quia ab sunt
+            praesentium aliquid voluptatum laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 6th container -->
+    <div class="dev-container row mb-5 mt-5">
+      <div class="col-xl-6 text-center text-uppercase">
+        <div class="sub-footer text-uppercase text-brand">
+          <h5>Банкы тухай</h5>
+          <ul>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Эрхэм зорилго</a>
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Банкны товч танилцуулга</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Тогтвортой хөгжил ба нийгмийн хариуцлага</a
+              >
+            </li>
+          </ul>
+          <h5>Зээлийн Үйлчилгээ</h5>
+          <ul>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Хэрэглээний зээл</a>
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Орон сууцны зээл</a>
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Малчны зээл</a>
+            </li>
+          </ul>
+          <h5>Гадаад төлбөр тооцоо</h5>
+          <ul>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Харилцагч банкнууд</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Вэстэрнюнион</a>
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Гадаад гуйвуулга</a>
+            </li>
+          </ul>
+          <h5>Бусад Үйлчилгээ</h5>
+          <ul>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Даатгалын зуучлалын үйлчилгээ</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Үнэт зүйл хадгалах үйлчилгээ</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">
+                  Эскроу дансны үйлчилгээ</a
+              >
+            </li>
+          </ul>
+          <h5>Харилцах хадгаламж</h5>
+          <ul>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Харилцах данс</a>
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Хугацаатай хадгаламж</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link"
+                >Хугацаагүй хадгаламж</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Онлайн хадгаламж</a>
+            </li>
+            <li>
+              <a href="" class="text-muted sub-footer-link">Нэмэлт Үйлчилгээ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="spec-v"></div>
+      <div class="col-xl-6 text-center">
+        <div class="sub-footer-container">
+          <img src="./assets/images/x-frame.png" alt="Get Gyls Bank" />
+          <div class="right-item text-uppercase">
+            <img src="./assets/images/blue-gyalsbank.png" alt="Get Gyls Bank">
+            <h5 class="mt-5">Lorem ipsum dolor sit amet.</h5>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cupiditate autem, ullam velit doloribus dolore illum. Vero porro expedita impedit nihil nisi. Ex, a quidem aspernatur vero sequi consequatur eveniet.</span>
+            <a class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand btn-color-brand w-60 mt-3" href="#">Дэлгэрэнгүй мэдээлэл авах</a>
+            <div class="mt-3 ">
+              <a href="" class="get-btn"><img src="./assets/images/playstore.png" alt="Get Gyls Bank" class="mr-3"></a>
+              <a href="" class="get-btn"><img src="./assets/images/appstore.png" alt="Get Gyls Bank"></a>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="dev-container footer text-white">
+        <div class="d-flex">
+          <div class="footer-text-left w-100">
+            <img src="assets/images/logo/footer-location.png" alt="Location" class="mr-3">
+            <span class="mr-5">Төрийн банк  Монгол Улс, Улаанбаатар хот  Чингэлтэй дүүрэг, Бага тойруу 7/1</span>
+
+            <img src="assets/images/logo/footer-telephone.png" alt="Location" class="mr-3 ml-3">
+            <span class="mr-5">1800-1881</span>
+            
+              <div class="float-right">
+              <a href="" class="ml-2"> <img src="./assets/images/logo/footer-facebook.png" alt="Facebook"></a>
+              <a href="" class="ml-2"> <img src="./assets/images/logo/footer-twitter.png" alt="Twitter"></a>
+              <a href="" class="ml-2"> <img src="./assets/images/logo/footer-youtube.png" alt="Youtube"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript">
       $("#headerCarousel").swipe({
         swipe: function(
