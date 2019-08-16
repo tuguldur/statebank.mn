@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/7c470651e7.js"></script>
     <script src="./dist/js/jquery-3.4.1.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <script src="./dist/js/jquery.touchSwipe.min.js"></script>
@@ -23,7 +24,7 @@
         <img src="./assets/images/logo.png" />
       </a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler material-icons"
         type="button"
         data-toggle="collapse"
         data-target="#navbarResponsive"
@@ -31,7 +32,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        menu
       </button>
       <div
         class="collapse navbar-collapse align-items-center"
@@ -63,91 +64,521 @@
         </ul>
       </div>
     </nav>
-    <!-- Header Form -->
-    <div id="header-form">
-      <form action="/" method="POST" class="d-flex dev-header-form">
-        <div>
-          <img
-            src="./assets/images/gyalsbank.png"
-            alt="gyalsbank"
-            class="form-image"
-          />
-        </div>
-        <input type="text" name="username" placeholder="Нэвтрэх нэр" />
-        <input type="password" name="password" placeholder="Нууц үг" />
-        <button type="submit" class="btn btn-success">Нэвтрэх</button>
-      </form>
-    </div>
-    <!-- Header Slider -->
-    <div
-      id="headerCarousel"
-      class="carousel slide carousel-fade dev-slider"
-      data-ride="carousel"
-    >
-      <ol class="carousel-indicators">
-        <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#headerCarousel" data-slide-to="1"></li>
-        <li data-target="#headerCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            class="d-block w-100 h-80vh"
-            src="https://initiate.alphacoders.com/images/979/stretched-1920-1080-979101.jpg?5172"
-            alt="First slide"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              Lorem ipsum dolor
-            </h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
-              cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
-              excepturi commodi aspernatur fuga vero ullam iste labore
-              voluptatum quod. Sapiente, illum nihil.
-            </p>
+    <div>
+      <!-- Header Form -->
+      <div id="header-form">
+        <form action="/" method="POST" class="d-flex dev-header-form">
+          <div>
+            <img
+              src="./assets/images/gyalsbank.png"
+              alt="gyalsbank"
+              class="form-image"
+            />
           </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            class="d-block w-100 h-80vh"
-            src="https://initiate.alphacoders.com/images/981/stretched-1920-1080-981731.jpg?1938"
-            alt="Second slide"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              Lorem ipsum dolor
-            </h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
-              cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
-              excepturi commodi aspernatur fuga vero ullam iste labore
-              voluptatum quod. Sapiente, illum nihil.
-            </p>
+          <input type="text" name="username" placeholder="Нэвтрэх нэр" />
+          <input type="password" name="password" placeholder="Нууц үг" />
+          <button type="submit" class="btn btn-success">Нэвтрэх</button>
+        </form>
+      </div>
+      <!-- Header Slider -->
+      <div
+        id="headerCarousel"
+        class="carousel slide carousel-fade dev-slider"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#headerCarousel"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#headerCarousel" data-slide-to="1"></li>
+          <li data-target="#headerCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100 h-80vh"
+              src="/assets/images/slide1.jpg"
+              alt="First slide"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Lorem ipsum dolor
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
+                excepturi commodi aspernatur fuga vero ullam iste labore
+                voluptatum quod. Sapiente, illum nihil.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            class="d-block w-100 h-80vh"
-            src="https://www.iamag.co/wp-content/uploads/2017/07/yourname-background29.jpeg"
-            alt="Third slide"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              Lorem ipsum dolor
-            </h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
-              cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
-              excepturi commodi aspernatur fuga vero ullam iste labore
-              voluptatum quod. Sapiente, illum nihil.
-            </p>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100 h-80vh"
+              src="/assets/images/slide2.jpg"
+              alt="Second slide"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Lorem ipsum dolor
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
+                excepturi commodi aspernatur fuga vero ullam iste labore
+                voluptatum quod. Sapiente, illum nihil.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100 h-80vh"
+              src="/assets/images/slide3.jpeg"
+              alt="Third slide"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Lorem ipsum dolor
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                cumque! Maxime ducimus ex, recusandae assumenda veritatis beatae
+                excepturi commodi aspernatur fuga vero ullam iste labore
+                voluptatum quod. Sapiente, illum nihil.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Side Buttons -->
-    <div id="side-buttons"></div>
+    <div class="side-options">
+      <div>
+        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
+          <i class="fas fa-calculator"></i>
+          <div class="sh-side-options-hover">
+            Зээлийн<span></span>тооцоолуур
+          </div>
+        </a>
+        <div class="sh-side-options-divider"></div>
+        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
+          <i class="fas fa-user-alt"></i>
+          <div class="sh-side-options-hover">Онлайн<span></span>туслах</div>
+        </a>
+        <div class="sh-side-options-divider"></div>
+        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
+          <i class="fas fa-map-marked-alt"></i>
+          <div class="sh-side-options-hover">Хаяг,<span></span>байршил</div>
+        </a>
+        <div class="sh-side-options-divider"></div>
+        <a target="blank" href="#" class="sh-side-options-item sh-accent-color">
+          <i class="fas fa-comments"></i>
+          <div class="sh-side-options-hover">Санал<span></span>хүсэлт</div>
+        </a>
+        <div class="sh-side-options-divider"></div>
+        <a
+          href="#"
+          class="sh-side-options-item sh-accent-color"
+          id="scroll-top"
+        >
+          <i class="fas fa-arrow-circle-up"></i>
+          <div class="sh-side-options-hover">Дээш<span></span>буцах</div>
+        </a>
+      </div>
+    </div>
+    <!-- second container -->
+    <div>
+      <div class="section-header-title">
+        <h3>Цэс</h3>
+      </div>
+      <div class="row dev-container">
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box"></div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Цахим Үйлчилгээ</span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box"></div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Хадгаламж</span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box"></div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Зээл</span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+          <div class="gradient-box"></div>
+          <div
+            class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+          >
+            <span>Карт</span>
+          </div>
+        </div>
+        <div class="mt-5 mb-5 text-brand">
+          <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+          <div class="spec"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vel
+            laudantium, dicta perferendis nostrum exercitationem, fuga
+            consequuntur hic delectus ullam, modi sint fugiat quia ab sunt
+            praesentium aliquid voluptatum laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 3rd container -->
+    <div class="w-100">
+      <div
+        id="carouselHome"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselHome" data-slide-to="1"></li>
+          <li data-target="#carouselHome" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              width="1000"
+              height="600"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: First slide"
+            >
+              <rect fill="#777" width="100%" height="100%"></rect>
+              <text fill="#555" dy=".3em" x="50%" y="50%">First slide</text>
+            </svg>
+            <div class="carousel-caption">
+              <div class="d-none d-md-block">
+                <h3 class="text-white">
+                  Lorem, ipsum dolor sit amet consectetur
+                </h3>
+                <p class="max-500">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus quidem, autem excepturi nulla odit ipsa iste
+                  officia deserunt qui. Molestiae minus nisi iure eveniet itaque
+                  repudiandae quisquam odio consectetur molestias.
+                </p>
+              </div>
+              <a
+                class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand"
+                href="#"
+                >Мэдээлэл унших</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              width="1000"
+              height="600"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: Second slide"
+            >
+              <rect fill="#666" width="100%" height="100%"></rect>
+              <text fill="#444" dy=".3em" x="50%" y="50%">Second slide</text>
+            </svg>
+            <div class="carousel-caption">
+              <div class="d-none d-md-block">
+                <h3 class="text-white">
+                  Lorem, ipsum dolor sit amet consectetur
+                </h3>
+                <p class="max-500">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus quidem, autem excepturi nulla odit ipsa iste
+                  officia deserunt qui. Molestiae minus nisi iure eveniet itaque
+                  repudiandae quisquam odio consectetur molestias.
+                </p>
+              </div>
+              <a
+                class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand"
+                href="#"
+                >Мэдээлэл унших</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              width="1000"
+              height="600"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: Third slide"
+            >
+              <rect fill="#555" width="100%" height="100%"></rect>
+              <text fill="#333" dy=".3em" x="50%" y="50%">Third slide</text>
+            </svg>
+            <div class="carousel-caption">
+              <div class="d-none d-md-block">
+                <h3 class="text-white">
+                  Lorem, ipsum dolor sit amet consectetur
+                </h3>
+                <p class="max-500">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus quidem, autem excepturi nulla odit ipsa iste
+                  officia deserunt qui. Molestiae minus nisi iure eveniet itaque
+                  repudiandae quisquam odio consectetur molestias.
+                </p>
+              </div>
+              <a
+                class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand"
+                href="#"
+                >Мэдээлэл унших</a
+              >
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselHome"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselHome"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <!-- 4th container -->
+    <div class="pb-5">
+      <div class="w-100 dev-right-container">
+        <div class="section-header-title-right">
+          <h3>Мэдээ Мэдээлэл</h3>
+        </div>
+      </div>
+      <div class="dev-container row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="brand-card">
+            <a href="" class="text-brand">
+              <div class="brand-card-image">
+                <img src="assets/images/card-image.svg" alt="card image" />
+              </div>
+              <div class="brand-card-title mt-2">
+                <h5>Lorem ipsum dolor sit</h5>
+              </div>
+            </a>
+            <div class="spec-s"></div>
+            <div class="brand-card-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                error aperiam placeat odio tempora natus, itaque eaque dolorem
+                fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                recusandae, unde corrupti.
+              </p>
+            </div>
+            <div class="spec-s mb-0"></div>
+            <div class="brand-card-footer text-right pr-1">
+              <small>2019/8/13 12:55pm</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="brand-card">
+              <a href="" class="text-brand">
+                <div class="brand-card-image">
+                  <img src="assets/images/card-image.svg" alt="card image" />
+                </div>
+                <div class="brand-card-title mt-2">
+                  <h5>Lorem ipsum dolor sit</h5>
+                </div>
+              </a>
+              <div class="spec-s"></div>
+              <div class="brand-card-desc">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                  error aperiam placeat odio tempora natus, itaque eaque dolorem
+                  fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                  recusandae, unde corrupti.
+                </p>
+              </div>
+              <div class="spec-s mb-0"></div>
+              <div class="brand-card-footer text-right pr-1">
+                <small>2019/8/13 12:55pm</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="brand-card">
+                <a href="" class="text-brand">
+                  <div class="brand-card-image">
+                    <img src="assets/images/card-image.svg" alt="card image" />
+                  </div>
+                  <div class="brand-card-title mt-2">
+                    <h5>Lorem ipsum dolor sit</h5>
+                  </div>
+                </a>
+                <div class="spec-s"></div>
+                <div class="brand-card-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                    error aperiam placeat odio tempora natus, itaque eaque dolorem
+                    fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                    recusandae, unde corrupti.
+                  </p>
+                </div>
+                <div class="spec-s mb-0"></div>
+                <div class="brand-card-footer text-right pr-1">
+                  <small>2019/8/13 12:55pm</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="brand-card">
+                  <a href="" class="text-brand">
+                    <div class="brand-card-image">
+                      <img src="assets/images/card-image.svg" alt="card image" />
+                    </div>
+                    <div class="brand-card-title mt-2">
+                      <h5>Lorem ipsum dolor sit</h5>
+                    </div>
+                  </a>
+                  <div class="spec-s"></div>
+                  <div class="brand-card-desc">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                      error aperiam placeat odio tempora natus, itaque eaque dolorem
+                      fugiat libero magni hic dignissimos, voluptatum cum ea quasi
+                      recusandae, unde corrupti.
+                    </p>
+                  </div>
+                  <div class="spec-s mb-0"></div>
+                  <div class="brand-card-footer text-right pr-1">
+                    <small>2019/8/13 12:55pm</small>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </div>
+    <!-- 5th container -->
+    <div class="w-100 row">
+        <div class="section-header-title col-xl-3">
+            <h3>Ханш</h3>
+          </div>
+          <div class="currency-rate col-xl-9">
+            <div class="currency-rate-container">
+            <div>
+              <img src="./assets/images/flags/us.png" alt="USD">
+                <span>USD</span>
+                <span class="ml-3 mr-3">2,662.00</span>
+                <span class="mr-3">2,672.00</span>
+            </div>
+            <div>
+                <img src="./assets/images/flags/cn.png" alt="USD">
+                  <span>CNY</span>
+                  <span class="ml-3 mr-3">385.50</span>
+                  <span class="mr-3">388.50</span>
+              </div>
+              <div>
+                  <img src="./assets/images/flags/ru.png" alt="USD">
+                    <span>RUB</span>
+                    <span class="ml-3 mr-3">41.49</span>
+                    <span class="mr-3">43.40</span>
+                </div>
+                <div>
+                    <img src="./assets/images/flags/us.png" alt="USD">
+                      <span>EUR</span>
+                      <span class="ml-3 mr-3">2,957.00</span>
+                      <span class="mr-3">3,016.00</span>
+                  </div>
+                  <div>
+                      <img src="./assets/images/flags/jp.png" alt="USD">
+                        <span>JPY</span>
+                        <span class="ml-3 mr-3">25.01</span>
+                        <span class="mr-3">25.53</span>
+                    </div>
+                    <div>
+                        <img src="./assets/images/flags/gbp.png" alt="USD">
+                          <span>GBP</span>
+                          <span class="ml-3 mr-3">3,190.00</span>
+                          <span class="mr-3">3,274.00</span>
+                    </div>
+            </div>
+          </div>
+    </div>
+    <div class="bg-section-brand">
+        <div class="row dev-container">
+          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+            <div class="gradient-box"></div>
+            <div
+              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+            >
+              <span>Шилэн Данс</span>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+            <div class="gradient-box"></div>
+            <div
+              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+            >
+              <span>Тендер</span>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+            <div class="gradient-box"></div>
+            <div
+              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+            >
+              <span>Мэдээлэлийн аюулгүй байдал</span>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+            <div class="gradient-box"></div>
+            <div
+              class="card-title text-center mt-3 text-brand-hover font-weight-bold"
+            >
+              <span>Бусад</span>
+            </div>
+          </div>
+          <div class="mt-5 mb-5 text-white">
+            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+            <div class="spec"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vel
+              laudantium, dicta perferendis nostrum exercitationem, fuga
+              consequuntur hic delectus ullam, modi sint fugiat quia ab sunt
+              praesentium aliquid voluptatum laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 6th container -->
+    <div class="dev-container row">
+      <div class="col-xl-6 text-center text-uppercase">1</div>
+      <div class="spec-v"></div>
+      <div class="col-xl-6 text-center">1</div>
+    </div>
     <script type="text/javascript">
       $("#headerCarousel").swipe({
         swipe: function(
