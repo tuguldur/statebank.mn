@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/7c470651e7.js"></script>
     <script src="./dist/js/jquery-3.4.1.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <script src="./dist/js/jquery.touchSwipe.min.js"></script>
@@ -21,23 +20,17 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light dev-nav">
       <a class="navbar-brand" href="#">
-        <img src="./assets/images/logo.png" />
+        <img src="./assets/images/logo-mobile.png" class="d-none dev-logo-mini">
+        <img src="./assets/images/logo.png" class="dev-logo" />
       </a>
-      <button
-        class="navbar-toggler material-icons"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        menu
-      </button>
-      <div
-        class="collapse navbar-collapse align-items-center"
-        id="navbarResponsive"
-      >
+     <div class="d-flex">
+        <button class="navbar-toggler material-icons dev-drawer">
+            search
+        </button>
+        <button class="navbar-toggler material-icons dev-drawer">
+          menu
+        </button>
+     </div>
         <ul class="navbar-nav ml-auto align-items-center">
           <li class="nav-item mr-3">
             <a class="nav-link dev-nav-link dev-lang" href=""
@@ -62,10 +55,9 @@
             >
           </li>
         </ul>
-      </div>
     </nav>
     <!-- Slider -->
-    <div>
+    <div class="bg-brand">
       <!-- Header Form -->
       <div id="header-form">
         <form action="/" method="POST" class="d-flex dev-header-form">
@@ -76,7 +68,7 @@
               class="form-image"
             />
           </div>
-          <input type="text" name="username" placeholder="Нэвтрэх нэр" />
+          <input type="text" name="username" placeholder="Нэвтрэх нэр" autocomplete="off" />
           <input type="password" name="password" placeholder="Нууц үг" />
           <button type="submit" class="btn btn-success">Нэвтрэх</button>
         </form>
@@ -223,7 +215,7 @@
         <h3>Цэс</h3>
       </div>
       <div class="row dev-container">
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
             <img src="./assets/images/big-logo/computer.png" alt="Цахим Үйлчилгээ">
           </div>
@@ -233,7 +225,7 @@
             <span>Цахим Үйлчилгээ</span>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
               <img src="./assets/images/big-logo/piggy-bank.png" alt="Хадгаламж">
           </div>
@@ -243,7 +235,7 @@
             <span>Хадгаламж</span>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
               <img src="./assets/images/big-logo/business-and-finance.png" alt="Хадгаламж">
           </div>
@@ -253,7 +245,7 @@
             <span>Зээл</span>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
               <img src="./assets/images/big-logo/id-card.png" alt="Хадгаламж">  
           </div>
@@ -263,7 +255,7 @@
             <span>Карт</span>
           </div>
         </div>
-        <div class="mt-5 mb-5 text-brand">
+        <div class="p-5 text-brand">
           <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
           <div class="spec"></div>
           <p>
@@ -380,7 +372,7 @@
         </div>
       </div>
       <div class="dev-container row">
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xs-6 col-md-6 col-xl-3">
           <div class="brand-card">
             <a href="" class="text-brand">
               <div class="brand-card-image">
@@ -405,7 +397,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xs-6 col-md-6 col-xl-3 ">
           <div class="brand-card">
             <a href="" class="text-brand">
               <div class="brand-card-image">
@@ -430,7 +422,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xs-6 col-md-6 col-xl-3 ">
           <div class="brand-card">
             <a href="" class="text-brand">
               <div class="brand-card-image">
@@ -455,7 +447,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xs-6 col-md-6 col-xl-3">
           <div class="brand-card">
             <a href="" class="text-brand">
               <div class="brand-card-image">
@@ -530,7 +522,7 @@
     </div>
     <div class="bg-section-brand">
       <div class="row dev-container">
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
             <img src="./assets/images/big-logo/online-security.png" alt="Шилэн Данс">
           </div>
@@ -540,7 +532,7 @@
             <span>Шилэн Данс</span>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
               <img src="./assets/images/big-logo/briefcase.png" alt="Тендер">
           </div>
@@ -550,7 +542,7 @@
             <span>Тендер</span>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
               <img src="./assets/images/big-logo/secure-shield.png" alt="Мэдээлэлийн аюулгүй байдал">
           </div>
@@ -560,7 +552,7 @@
             <span>Мэдээлэлийн аюулгүй байдал</span>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-xl-3 dev-card-container">
+        <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
               <img src="./assets/images/big-logo/border.png" alt="Бусад">
           </div>
@@ -570,7 +562,7 @@
             <span>Бусад</span>
           </div>
         </div>
-        <div class="mt-5 mb-5 text-white">
+        <div class="p-5 text-white">
           <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
           <div class="spec"></div>
           <p>
@@ -584,7 +576,7 @@
     </div>
     <!-- 6th container -->
     <div class="dev-container row mb-5 mt-5">
-      <div class="col-xl-6 text-center text-uppercase">
+      <div class="col-md-12 col-xs-12 col-xl-6 text-center text-uppercase">
         <div class="sub-footer text-uppercase text-brand">
           <h5>Банкы тухай</h5>
           <ul>
@@ -671,16 +663,16 @@
         </div>
       </div>
       <div class="spec-v"></div>
-      <div class="col-xl-6 text-center">
-        <div class="sub-footer-container">
-          <img src="./assets/images/x-frame.png" alt="Get Gyls Bank" />
-          <div class="right-item text-uppercase">
+      <div class="col-md-12 col-xs-12 col-xl-6 text-center">
+        <div class="sub-footer-container row">
+          <img src="./assets/images/x-frame.png" alt="Get Gyls Bank" class="col-xl-5 col-md-6 col-xs-12 phone-frame" />
+          <div class="right-item text-uppercase col-xl-7 col-md-6 col-xs-12">
             <img src="./assets/images/blue-gyalsbank.png" alt="Get Gyls Bank">
             <h5 class="mt-5">Lorem ipsum dolor sit amet.</h5>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cupiditate autem, ullam velit doloribus dolore illum. Vero porro expedita impedit nihil nisi. Ex, a quidem aspernatur vero sequi consequatur eveniet.</span>
-            <a class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand btn-color-brand w-60 mt-3" href="#">Дэлгэрэнгүй мэдээлэл авах</a>
+            <a class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand btn-color-brand w-auto mt-3" href="#">Дэлгэрэнгүй мэдээлэл авах</a>
             <div class="mt-3 ">
-              <a href="" class="get-btn"><img src="./assets/images/playstore.png" alt="Get Gyls Bank" class="mr-3"></a>
+              <a href="" class="get-btn"><img src="./assets/images/playstore.png" alt="Get Gyls Bank" class="mr-3 mb-3"></a>
               <a href="" class="get-btn"><img src="./assets/images/appstore.png" alt="Get Gyls Bank"></a>  
             </div>
           </div>
@@ -689,14 +681,16 @@
     </div>
     <footer id="footer">
       <div class="dev-container footer text-white">
-        <div class="d-flex">
-          <div class="footer-text-left w-100">
+        <div class="d-flex row">
+          <div class="footer-text-left w-100 ">
+          
             <img src="assets/images/logo/footer-location.png" alt="Location" class="mr-3">
             <span class="mr-5">Төрийн банк  Монгол Улс, Улаанбаатар хот  Чингэлтэй дүүрэг, Бага тойруу 7/1</span>
-
+          
+         <br>
             <img src="assets/images/logo/footer-telephone.png" alt="Location" class="mr-3 ml-3">
             <span class="mr-5">1800-1881</span>
-            
+            <br>
               <div class="float-right">
               <a href="" class="ml-2"> <img src="./assets/images/logo/footer-facebook.png" alt="Facebook"></a>
               <a href="" class="ml-2"> <img src="./assets/images/logo/footer-twitter.png" alt="Twitter"></a>
