@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i&display=swap" rel="stylesheet">
     <script src="./dist/js/jquery-3.4.1.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <script src="./dist/js/jquery.touchSwipe.min.js"></script>
@@ -19,16 +20,16 @@
   <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light dev-nav">
-      <a class="navbar-brand" href="#">
+        <button class="navbar-toggler material-icons dev-drawer" id="drawer-btn">
+            menu
+        </button>
+      <a class="navbar-brand" href="/">
         <img src="./assets/images/logo-mobile.png" class="d-none dev-logo-mini">
         <img src="./assets/images/logo.png" class="dev-logo" />
       </a>
      <div class="d-flex">
         <button class="navbar-toggler material-icons dev-drawer">
             search
-        </button>
-        <button class="navbar-toggler material-icons dev-drawer">
-          menu
         </button>
      </div>
         <ul class="navbar-nav ml-auto align-items-center">
@@ -56,6 +57,31 @@
           </li>
         </ul>
     </nav>
+    <!-- drawer -->
+    <nav id="drawer">
+      <div class="drawer-container">
+        <span class="side-nav-title">Холбоос</span>
+        <a href="#" class="side-nav-link">Иргэд</a>
+        <a href="#" class="side-nav-link">Байгууллага</a>
+      </div>
+      <div class="drawer-container pt-3">
+          <a href="#" class="side-nav-link">Зээлийн тооцоолуур</a>
+          <a href="#" class="side-nav-link">Хадгаламжийн тооцоолуур</a>
+          <a href="#" class="side-nav-link">Ханшийн мэдээ</a>
+          <a href="#" class="side-nav-link">Халамжийн мэдээ</a>
+          <a href="#" class="side-nav-link">Онлайн туслах</a> 
+          <a href="#" class="side-nav-link">Санал хүсэлт</a> 
+          <a href="#" class="side-nav-link">Хаяг, байршил</a> 
+
+          <a href="#" class="side-nav-link">Twitter</a> 
+          <a href="#" class="side-nav-link">Facebook</a> 
+          <a href="#" class="side-nav-link">Youtube</a>
+        </div>
+        <div class="drawer-container pt-3">
+            <a href="#" class="side-nav-link">English</a>
+        </div>
+    </nav>
+    <div class="drawer-overlay"></div>
     <!-- Slider -->
     <div class="bg-brand">
       <!-- Header Form -->
@@ -475,46 +501,48 @@
       </div>
     </div>
     <!-- 5th container -->
-    <div class="w-100 row">
+    <div class="w-100 row currency-modal">
       <div class="section-header-title col-xl-3 mt-10">
         <h3>Ханш</h3>
+        <div class="f-g"></div>
+        <i class="material-icons">keyboard_arrow_up</i>
       </div>
-      <div class="currency-rate col-xl-9">
+      <div class="currency-rate col-xl-9 d-none d-xl-block">
         <div class="currency-rate-container">
           <div>
             <img src="./assets/images/flags/us.png" alt="USD" />
             <span>USD</span>
-            <span class="ml-3 mr-3">2,662.00</span>
+            <span class="ml-1 mr-1">2,662.00</span>
             <span class="mr-3">2,672.00</span>
           </div>
           <div>
             <img src="./assets/images/flags/cn.png" alt="USD" />
             <span>CNY</span>
-            <span class="ml-3 mr-3">385.50</span>
+            <span class="ml-1 mr-1">385.50</span>
             <span class="mr-3">388.50</span>
           </div>
           <div>
             <img src="./assets/images/flags/ru.png" alt="USD" />
             <span>RUB</span>
-            <span class="ml-3 mr-3">41.49</span>
+            <span class="ml-1 mr-1">41.49</span>
             <span class="mr-3">43.40</span>
           </div>
           <div>
             <img src="./assets/images/flags/us.png" alt="USD" />
             <span>EUR</span>
-            <span class="ml-3 mr-3">2,957.00</span>
+            <span class="ml-1 mr-1">2,957.00</span>
             <span class="mr-3">3,016.00</span>
           </div>
           <div>
             <img src="./assets/images/flags/jp.png" alt="USD" />
             <span>JPY</span>
-            <span class="ml-3 mr-3">25.01</span>
+            <span class="ml-1 mr-1">25.01</span>
             <span class="mr-3">25.53</span>
           </div>
           <div>
             <img src="./assets/images/flags/gbp.png" alt="USD" />
             <span>GBP</span>
-            <span class="ml-3 mr-3">3,190.00</span>
+            <span class="ml-1 mr-1">3,190.00</span>
             <span class="mr-3">3,274.00</span>
           </div>
         </div>
@@ -716,5 +744,17 @@
         allowPageScroll: "vertical"
       });
     </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('.drawer-overlay').on('click', function () {
+              $('#drawer').removeClass('active');
+              $('.drawer-overlay').removeClass('active');
+          });
+          $('#drawer-btn').click(function () {
+              $('#drawer').addClass('active');
+              $('.drawer-overlay').addClass('active');
+          });
+      });
+  </script>
   </body>
 </html>
