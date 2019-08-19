@@ -360,7 +360,7 @@ a.sub-footer-link:hover {
 
   position: absolute;
   right: 50%;
-  height: 70%;
+  height: 60%;
 }
 .sub-footer-container {
   padding-top: 100px;
@@ -636,4 +636,40 @@ a.sub-footer-link:hover {
 }
 .drawer-container:last-child {
   border-bottom: none;
+}
+/* Currency table */
+.exchangetable th,
+.exchangetable td {
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  padding: 6px 24px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.exchangetable th {
+  color: #00aeef;
+  font-family: verdana;
+  font-size: 12px;
+}
+.exchangetable td {
+  line-height: 16px;
+  font-family: arial;
+  font-size: 11px;
+}
+@media screen and (max-width: 740px) and (min-width: 0px) {
+  .shp,
+  .him {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 0px) {
+  .hip {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  #currency-modal .modal-dialog {
+    max-width: 600px;
+  }
 }
