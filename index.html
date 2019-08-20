@@ -20,6 +20,7 @@
   <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light dev-nav">
+      <div class="container">
         <button class="navbar-toggler material-icons dev-drawer" id="drawer-btn">
             menu
         </button>
@@ -56,7 +57,24 @@
             >
           </li>
         </ul>
+      </div>
     </nav>
+    <div id="header-form" class="container">
+        <div class="header-form-container">
+          <form action="https://www.ibank.mn/Customer/ValidateUsernameMini/" method="POST" class="d-flex dev-header-form">
+            <div>
+              <img
+                src="./assets/images/gyalsbank.png"
+                alt="gyalsbank"
+                class="form-image"
+              />
+            </div>
+            <input type="text" name="username" placeholder="Нэвтрэх нэр" autocomplete="off" />
+            <input type="password" name="password" placeholder="Нууц үг" />
+            <button type="submit" class="btn btn-success">Нэвтрэх</button>
+          </form>
+        </div>
+        </div>
     <!-- drawer -->
     <nav id="drawer">
       <div class="drawer-container">
@@ -84,28 +102,13 @@
     <div class="drawer-overlay"></div>
     <!-- Slider -->
     <div class="bg-brand">
-      <!-- Header Form -->
-      <div id="header-form">
-        <form action="/" method="POST" class="d-flex dev-header-form">
-          <div>
-            <img
-              src="./assets/images/gyalsbank.png"
-              alt="gyalsbank"
-              class="form-image"
-            />
-          </div>
-          <input type="text" name="username" placeholder="Нэвтрэх нэр" autocomplete="off" />
-          <input type="password" name="password" placeholder="Нууц үг" />
-          <button type="submit" class="btn btn-success">Нэвтрэх</button>
-        </form>
-      </div>
       <!-- Header Slider -->
       <div
         id="headerCarousel"
         class="carousel slide carousel-fade dev-slider"
         data-ride="carousel"
       >
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators header-c-in container">
           <li
             data-target="#headerCarousel"
             data-slide-to="0"
@@ -114,6 +117,7 @@
           <li data-target="#headerCarousel" data-slide-to="1"></li>
           <li data-target="#headerCarousel" data-slide-to="2"></li>
         </ol>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
@@ -121,7 +125,7 @@
               src="assets/images/slide/slide.jpg"
               alt="First slide"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block container">
               <h5>
                 Lorem ipsum dolor
               </h5>
@@ -139,7 +143,7 @@
               src="assets/images/slide/slide.jpg"
               alt="Second slide"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block container">
               <h5>
                 Lorem ipsum dolor
               </h5>
@@ -157,7 +161,7 @@
               src="assets/images/slide/slide.jpg"
               alt="Third slide"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block container">
               <h5>
                 Lorem ipsum dolor
               </h5>
@@ -240,7 +244,8 @@
       <div class="section-header-title">
         <h3>Цэс</h3>
       </div>
-      <div class="row dev-container">
+      <div class="container">
+      <div class="row">
         <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
             <img src="./assets/images/big-logo/computer.png" alt="Цахим Үйлчилгээ">
@@ -293,6 +298,7 @@
         </div>
       </div>
     </div>
+  </div>
     <!-- 3rd container Slider-->
     <div class="w-100">
       <div
@@ -308,7 +314,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="./assets/images/slide/second-slider.jpg" alt="Slider" class="w-100">
-            <div class="carousel-caption">
+            <div class="carousel-caption container">
               <div class="d-none d-md-block">
                 <h3 class="text-white">
                   Lorem, ipsum dolor sit amet consectetur
@@ -329,7 +335,7 @@
           </div>
           <div class="carousel-item">
               <img src="./assets/images/slide/second-slider.jpg" alt="Slider" class="w-100">
-            <div class="carousel-caption">
+            <div class="carousel-caption container">
               <div class="d-none d-md-block">
                 <h3 class="text-white">
                   Lorem, ipsum dolor sit amet consectetur
@@ -350,7 +356,7 @@
           </div>
           <div class="carousel-item">
               <img src="./assets/images/slide/second-slider.jpg" alt="Slider" class="w-100">
-            <div class="carousel-caption">
+            <div class="carousel-caption container">
               <div class="d-none d-md-block">
                 <h3 class="text-white">
                   Lorem, ipsum dolor sit amet consectetur
@@ -397,7 +403,8 @@
           <h3>Мэдээ Мэдээлэл</h3>
         </div>
       </div>
-      <div class="dev-container row">
+      <div class="container">
+        <div class="row">
         <div class="col-xs-6 col-md-6 col-xl-3">
           <div class="brand-card">
             <a href="" class="text-brand">
@@ -500,6 +507,7 @@
         </div>
       </div>
     </div>
+  </div>
     <!-- 5th container -->
     <div class="w-100 row currency-modal">
       <div class="section-header-title col-xl-3 mt-10">
@@ -549,7 +557,8 @@
       </div>
     </div>
     <div class="bg-section-brand">
-      <div class="row dev-container">
+      <div class="container">
+        <div class="row">
         <div class="col-xs-6 col-md-6 col-xl-3 dev-card-container">
           <div class="gradient-box">
             <img src="./assets/images/big-logo/online-security.png" alt="Шилэн Данс">
@@ -602,9 +611,11 @@
         </div>
       </div>
     </div>
+  </div>
     <!-- 6th container -->
-    <div class="dev-container row mb-5 mt-5">
-      <div class="col-md-12 col-xs-12 col-xl-6 text-center text-uppercase">
+    <div class="container mb-5 mt-5">
+      <div class="row">
+      <div class="col-md-12 col-xs-12 col-xl-6 text-center text-uppercase border-right">
         <div class="sub-footer text-uppercase text-brand">
           <h5>Банкы тухай</h5>
           <ul>
@@ -690,25 +701,25 @@
           </ul>
         </div>
       </div>
-      <div class="spec-v"></div>
       <div class="col-md-12 col-xs-12 col-xl-6 text-center">
-        <div class="sub-footer-container row">
+        <div class="sub-footer-container row h-100">
           <img src="./assets/images/x-frame.png" alt="Get Gyls Bank" class="col-xl-5 col-md-6 col-xs-12 phone-frame" />
           <div class="right-item text-uppercase col-xl-7 col-md-6 col-xs-12">
             <img src="./assets/images/blue-gyalsbank.png" alt="Get Gyls Bank">
-            <h5 class="mt-5">Lorem ipsum dolor sit amet.</h5>
+            <h5 class="mt-3">Lorem ipsum dolor sit amet.</h5>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cupiditate autem, ullam velit doloribus dolore illum. Vero porro expedita impedit nihil nisi. Ex, a quidem aspernatur vero sequi consequatur eveniet.</span>
             <a class="btn-sm btn btn-outline-white rounded-pill text-uppercase btn-brand btn-color-brand w-auto mt-3" href="#">Дэлгэрэнгүй мэдээлэл авах</a>
-            <div class="mt-3 ">
-              <a href="" class="get-btn"><img src="./assets/images/playstore.png" alt="Get Gyls Bank" class="mr-3 mb-3"></a>
+            <div class="mt-3 get-btn-center">
+              <a href="" class="get-btn"><img src="./assets/images/playstore.png" alt="Get Gyls Bank" class="mr-3 "></a>
               <a href="" class="get-btn"><img src="./assets/images/appstore.png" alt="Get Gyls Bank"></a>  
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+  </div>
     <footer id="footer">
-      <div class="dev-container footer text-white">
+      <div class="container footer text-white">
         <div class="d-flex row">
           <div class="footer-text-left w-100 ">
             <img src="assets/images/logo/footer-location.png" alt="Location" class="mr-3">
