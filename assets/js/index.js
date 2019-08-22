@@ -1,4 +1,5 @@
 (function($) {
+  $("#currency-modal").modal("show");
   // Header Carousel Change slide on Swipe
   $("#headerCarousel").swipe({
     swipe: function(

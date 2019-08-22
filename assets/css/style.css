@@ -5,9 +5,6 @@ body {
 br {
   display: none;
 }
-#headerCarousel {
-  cursor: pointer;
-}
 .mt-10 {
   margin-top: 10px;
 }
@@ -404,6 +401,8 @@ a.sub-footer-link:hover {
   display: block;
   margin-bottom: 10px;
   transition: margin 250ms;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 .helpboxnew > a:hover {
   margin-left: -100px;
@@ -413,7 +412,9 @@ a.sub-footer-link:hover {
   width: auto;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  box-shadow: 18px 0px 0px 0px #fff;
+  box-shadow: 18px 0px 0px 0px #fff, 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  /* box-shadow: ; */
 }
 .helpboxnew > a:hover .side-link-text {
   display: block;
@@ -676,12 +677,74 @@ a.sub-footer-link:hover {
     display: none;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
+  #currency-modal .modal-dialog {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1200px) {
   #currency-modal .modal-dialog {
     max-width: 600px;
+  }
+  .exchange-controller {
+    max-width: 90% !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 380px) {
+  #currency-modal.show {
+    padding-right: 0 !important;
+  }
+  #currency-modal .modal-dialog {
+    margin: 0;
+  }
+  .exchangetable th,
+  .exchangetable td {
+    padding: 6px 15px;
   }
 }
 .get-btn-center {
   display: flex;
   justify-content: center;
+}
+/* Header form */
+.nav-auth {
+  display: none;
+}
+@media (max-width: 1480px) {
+  .dev-slider .carousel-caption {
+    bottom: 5%;
+  }
+  #header-form {
+    top: 10%;
+  }
+}
+@media (max-width: 1137px) {
+  #header-form {
+    display: none;
+  }
+  .nav-auth {
+    display: flex;
+  }
+  .dev-slider .carousel-caption {
+    bottom: 20%;
+  }
+}
+/* exchange */
+.exchange-header {
+  color: #00aeef;
+  padding: 20px;
+}
+.exchange-controller .form-control:focus,
+.exchange-controller .custom-select:focus {
+  box-shadow: none !important;
+  border-color: #00aeef;
+}
+.exchange-controller {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.select-type {
+  display: flex;
+  justify-content: space-around;
 }
