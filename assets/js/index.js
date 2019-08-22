@@ -1,5 +1,4 @@
 (function($) {
-  $("#currency-modal").modal("show");
   // Header Carousel Change slide on Swipe
   $("#headerCarousel").swipe({
     swipe: function(
@@ -25,7 +24,7 @@
     $(".drawer-overlay").addClass("active");
   });
   //   Currency Dialog
-  $(".currency-modal").click(function() {
+  $(".currency-modal,.currency").click(function() {
     $("#currency-modal").modal("show");
   });
 })(window.jQuery);

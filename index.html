@@ -194,7 +194,7 @@
               <span class="side-link-text">Хадгаламжийн тооцоолуур</span>
             </div>
         </a>
-        <a class="hansh-hurvuulegch" href="/w/mn/hanshcalc" title="Ханшийн мэдээ">
+        <a class="hansh-hurvuulegch currency" href="" title="Ханшийн мэдээ">
             <div class="side-link-container">
                 <img src="assets/images/logo/3.png" alt="Зээлийн тооцоолуур" class="side-logo">
                 <span class="side-link-text">Ханшийн мэдээ</span>
@@ -1005,8 +1005,8 @@
                           <h5 class="text-center">Ханш хөрвүүлэх</h6>
                                         </div>
                                         <div class="form-group mb-3 select-type">
-                                                <label><input type="radio" name="optradio" checked class="mr-2 exchange-type" value="1">Зарах ханш</label>
-                                                <label><input type="radio" name="optradio" class="mr-2 exchange-type" value="2">Авах ханш</label>
+                                                <label><input type="radio" name="optradio" checked class="mr-2 exchange-type" value="1">Авах ханш</label>
+                                                <label><input type="radio" name="optradio" class="mr-2 exchange-type" value="2">Зарах ханш</label>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="exchange-value">Валютын хэмжээ</label>
@@ -1016,7 +1016,7 @@
                                         <div class="col">
                                             <div class="input-group">
                                                 <label for="from">Валютын нэгжээс</label>
-                                                <select class="custom-select exchange-buy" id="from">
+                                                <select class="custom-select exchange-buy from-buy" id="from">
                                                     <option value="1">ТӨГ</option>
                                                     <option value="2669">USD</option>
                                                     <option value="2938">EUR</option>
@@ -1032,7 +1032,7 @@
                                                     <option value="129115">XAU</option>
                                                     <option value="1290.68">XAG</option>
                                                 </select>
-                                                <select class="custom-select exchange-sell" id="from" style="display: none">
+                                                <select class="custom-select exchange-sell from-sell" id="from" style="display: none">
                                                     <option value="1">ТӨГ</option>
                                                                       <option value="2680">USD</option>
                                                                       <option value="3009">EUR</option>
@@ -1053,7 +1053,7 @@
                                         <div class="col">
                                             <div class="input-group">
                                               <label for="to">Валютын нэгж рүү</label>
-                                                <select class="custom-select exchange-buy" id="to">
+                                                <select class="custom-select exchange-buy to-buy" id="to">
                                                     <option value="1">ТӨГ</option>
                                                                       <option value="2669" selected="selected">Usd</option>
                                                                       <option value="2938">Eur</option>
@@ -1069,7 +1069,7 @@
                                                                       <option value="129115">Xau</option>
                                                                       <option value="1290.68">Xag</option>
                                                 </select>
-                                                <select class="custom-select exchange-sell" id="to" style="display: none">
+                                                <select class="custom-select exchange-sell to-sell" id="to" style="display: none">
                                                     <option value="1">ТӨГ</option>
                                                     <option value="2680" selected="selected">Usd</option>
                                                     <option value="3009">Eur</option>
@@ -1090,7 +1090,7 @@
                                       </div>
                                       <div class="form-group">
                                           <label for="exchange-result">Үр дүн</label>
-                                          <input type="number" class="form-control" id="exchange-result" placeholder="Үр дүн" readonly>
+                                          <input type="text" class="form-control" id="exchange-result" placeholder="Үр дүн" readonly>
                                       </div>
                                       <p><a href="/w/mn/ratehis" style="font-size: 12px;">Ханшийн түүх</a></p>
                                       <p style="font-size: 12px">
