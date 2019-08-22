@@ -27,4 +27,7 @@
   $(".currency-modal,.currency").click(function() {
     $("#currency-modal").modal("show");
   });
+  $(".currency").click(function(e) {
+    e.preventDefault();
+  });
 })(window.jQuery);

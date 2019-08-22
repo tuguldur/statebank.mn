@@ -68,7 +68,7 @@ br {
 /* Header form */
 #header-form {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 0;
   right: 0;
   z-index: 2;
@@ -715,8 +715,13 @@ a.sub-footer-link:hover {
   .dev-slider .carousel-caption {
     bottom: 5%;
   }
-  #header-form {
+}
+@media (max-height: 900px) {
+  .helpboxnew {
     top: 10%;
+  }
+  .helpboxnew a {
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 1137px) {
@@ -727,7 +732,7 @@ a.sub-footer-link:hover {
     display: flex;
   }
   .dev-slider .carousel-caption {
-    bottom: 20%;
+    bottom: 30%;
   }
 }
 /* exchange */
