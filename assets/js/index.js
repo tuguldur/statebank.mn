@@ -24,7 +24,7 @@
     $(".drawer-overlay").addClass("active");
   });
   //   Currency Dialog
-  $(".currency-modal,.currency").click(function() {
+  $(".currency-modal,.currency,.open-exchange").click(function() {
     $("#currency-modal").modal("show");
   });
   $(".currency").click(function(e) {
