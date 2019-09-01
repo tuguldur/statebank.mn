@@ -1,6 +1,32 @@
 (function($) {
+  // Days in Month
+  function days(month, year) {
+    return new Date(year, month + 1, 0).getDate();
+  }
+  function monthAsString(month) {
+    var months = [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ];
+    return months[month % 12];
+  }
+  // vars
+  var firstSaving = 0,
+    annualRate = 0,
+    monthlySaving = 0,
+    duration = 0;
   // Эхлэх хугацаа
-  var oneDay = 24 * 60 * 60 * 1000;
+  // var oneDay = 24 * 60 * 60 * 1000;
   var printDate = new Date()
     .toISOString()
     .slice(0, 10)
@@ -76,6 +102,8 @@
   amountSlider.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     amountInput.val(value);
+    firstSaving = value.match(/\d+/g).join("");
+    render_result();
   });
   amountInput.on("change", function() {
     var value = $(this).val();
@@ -101,6 +129,8 @@
   hvvSlider.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     hvvInput.val(value);
+    annualRate = value.match(/[+-]?\d+(\.\d+)?/g).join("");
+    render_result();
   });
   hvvInput.on("change", function() {
     var value = $(this).val();
@@ -126,6 +156,8 @@
   amountMonthly.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     amountMonthlyInput.val(value);
+    monthlySaving = value.match(/\d+/g).join("");
+    render_result();
   });
   amountMonthlyInput.on("change", function() {
     var value = $(this).val();
@@ -151,11 +183,35 @@
   month.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     monthInput.val(value);
+    duration = value.match(/\d+/g).join("");
+    render_result();
   });
   monthInput.on("change", function() {
     var value = $(this).val();
     month.noUiSlider.set(value);
   });
+  function render_result() {
+    var render = [];
+    for (var i = 0; i < duration; i++) {
+      render.push({
+        years: 1,
+        months: monthAsString(i),
+        days: days(i, 2016)
+      });
+    }
+    var result = render.map(function(render) {
+      return `<tr>
+      <td>2019.8.1</td>
+      <td>${render.months}</td>
+      <td>${render.days}</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>`;
+    });
+    console.log(result);
+    $("#result-table").html(result);
+  }
   $("#type").on("change", function() {
     console.log("dsa");
   });
