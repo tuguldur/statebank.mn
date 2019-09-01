@@ -9,8 +9,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
     <title>Хадгаламжийн тооцоолуур</title>
   </head>
   <body>
@@ -19,7 +19,11 @@
         <div class="form-group d-flex">
           <div class="form-inline">
             <label for="type" class="mr-3">Төрөл: </label>
-            <select name="type" id="type" class="form-control form-control-sm">
+            <select
+              name="type"
+              id="type"
+              class="form-control form-control-sm d-flex"
+            >
               <option value="0" selected="selected"
                 >-- Энгийн тооцоолуур --</option
               >
@@ -35,7 +39,7 @@
           <div class="form-inline">
             <label for="start-date" class="mr-3">Эхлэх хугацаа: </label>
             <input
-              class="form-control form-control-sm number-mask"
+              class="form-control form-control-sm"
               type="text"
               placeholder="Эхлэх хугацаа"
               id="start-date"
@@ -43,12 +47,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="form-group col-xl-12">
+          <div class="form-group col s12">
             <div class="row">
-              <div class="col">
+              <div class="col s6">
                 <div>
                   <div class="d-flex">
-                    <div class=" mt-1">
+                    <div class="mt-1 lh-48">
                       Данс нээх мөнгөн дүн :
                     </div>
                     <div class="f-g"></div>
@@ -67,7 +71,7 @@
                 </div>
                 <div class="mt-4">
                   <div class="d-flex">
-                    <div class=" mt-1">
+                    <div class="mt-1 lh-48">
                       Хүү:
                     </div>
                     <div class="f-g"></div>
@@ -85,10 +89,10 @@
                   </div>
                 </div>
               </div>
-              <div class="col">
+              <div class="col s6">
                 <div>
                   <div class="d-flex">
-                    <div class=" mt-1">
+                    <div class="mt-1 lh-48">
                       Хугацаа :
                     </div>
                     <div class="f-g"></div>
@@ -107,7 +111,7 @@
                 </div>
                 <div class="mt-4">
                   <div class="d-flex">
-                    <div class=" mt-1">
+                    <div class="mt-1 lh-48">
                       Сард хийх мөнгөн дүн:
                     </div>
                     <div class="f-g"></div>
@@ -127,13 +131,31 @@
               </div>
             </div>
           </div>
-          <div class="form-group"></div>
+
+          <div class="form-group mt-2 pl-3 d-flex">
+            <div class="result-container">
+              <h3 class="result-text m-0">2,200,000<span>₮</span></h3>
+              <h5 class="m-0 result-text">Таны хуримтлуулах мөнгө</h5>
+            </div>
+            <div class="result-container">
+              <h3 class="result-text m-0">186,674<span>₮</span></h3>
+              <h5 class="m-0 result-text">Цуглуулах хүү дангаараа</h5>
+            </div>
+            <div class="result-container">
+              <h3 class="result-text m-0">2,386,674<span>₮</span></h3>
+              <h5 class="m-0 result-text">Нийт мөнгөн дүн</h5>
+            </div>
+          </div>
         </div>
       </form>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="js/materialize.min.js"></script>
+
     <script src="js/nouislider.min.js"></script>
     <script src="js/wNumb.js"></script>
+    <script src="js/core.js"></script>
     <script src="js/calculator.js"></script>
   </body>
 </html>

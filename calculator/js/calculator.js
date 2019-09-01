@@ -1,10 +1,61 @@
 (function($) {
   // Эхлэх хугацаа
-  var startDate = new Date()
+  var oneDay = 24 * 60 * 60 * 1000;
+  var printDate = new Date()
     .toISOString()
     .slice(0, 10)
     .replace(/-/g, ".");
-  $("#start-date").val(startDate);
+  $("#start-date").val(printDate);
+  // var endDate;
+  $("#start-date").datepicker({
+    format: "yyyy.mm.dd",
+    i18n: {
+      months: [
+        "1-р сар",
+        "2-р сар",
+        "3-р сар",
+        "4-р сар",
+        "5-р сар",
+        "6-р сар",
+        "7-р сар",
+        "8-р сар",
+        "9-р сар",
+        "10-р сар",
+        "11-р сар",
+        "12-р сар"
+      ],
+      monthsShort: [
+        "1 - ",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      weekdays: [
+        "Даваа",
+        "Мягмар",
+        "Лхагва",
+        "Пүрэв",
+        "Баасан",
+        "Бямба",
+        "Ням"
+      ],
+      weekdaysShort: ["Да", "Мя", "Лх", "Пү", "Ба", "Бя", "Ня"],
+      weekdaysAbbrev: ["Да", "Мя", "Лх", "Пү", "Ба", "Бя", "Ня"],
+      cancel: "Цуцлах",
+      clear: "Цэвэрлэх",
+      done: "Ok"
+    },
+    autoClose: true,
+    minDate: new Date()
+  });
   /*
     ЭНГИЙН ТООЦООЛУУР ДАНС НЭЭХ МӨНГӨН ДҮН
   */
