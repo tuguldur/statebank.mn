@@ -1,24 +1,7 @@
 (function($) {
   // Days in Month
   function days(month, year) {
-    return new Date(year, month + 1, 0).getDate();
-  }
-  function monthAsString(month) {
-    var months = [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12"
-    ];
-    return months[month % 12];
+    return new Date(year, month, 0).getDate();
   }
   // vars
   var firstSaving = 0,
@@ -81,6 +64,9 @@
     },
     autoClose: true,
     minDate: new Date()
+  });
+  $("#start-date").change(function() {
+    printDate = $(this).val();
   });
   /*
     ЭНГИЙН ТООЦООЛУУР ДАНС НЭЭХ МӨНГӨН ДҮН
@@ -191,17 +177,23 @@
     month.noUiSlider.set(value);
   });
   function render_result() {
+    var month = printDate.substring(5, 7);
+    var year = printDate.substring(0, 4);
     var render = [];
     for (var i = 0; i < duration; i++) {
+      if (month === 12) {
+        month = 1;
+        year++;
+      } else month++;
       render.push({
-        years: 1,
-        months: monthAsString(i),
-        days: days(i, 2016)
+        years: year,
+        months: month,
+        days: days(month, year)
       });
     }
     var result = render.map(function(render) {
       return `<tr>
-      <td>2019.8.1</td>
+      <td>${render.years}.${render.months}.${render.days}</td>
       <td>${render.months}</td>
       <td>${render.days}</td>
       <td>0</td>
@@ -209,7 +201,6 @@
       <td>0</td>
     </tr>`;
     });
-    console.log(result);
     $("#result-table").html(result);
   }
   $("#type").on("change", function() {
