@@ -185,7 +185,6 @@
     var rate = 0;
     let months = month;
     var render = [];
-    console.log(annualRate);
     for (var i = 0; i < duration; i++) {
       money = money + monthlySaving;
       if (month === "12") {
@@ -193,9 +192,9 @@
           years: year,
           months: month,
           days: days(month, year),
-          rate: (((money * annualRate) / 10) * days(month, year)) / 365,
+          rate: (((money * annualRate) / 100) * days(month, year)) / 365,
           day: day,
-          money: money
+          money
         });
         months = 1;
         year++;
@@ -216,8 +215,22 @@
       });
     }
     var render_format = wNumb({
+      decimals: 0,
       thousand: ","
     });
+    let totalRate = 0;
+    for (i = 0; i < render.length; i++) {
+      //loop through the array
+      totalRate += render[i].rate; //Do the math!
+    }
+    var last = (last = Object.values(render))[last.length - 1];
+    if (typeof last != "undefined") {
+      $("#result-niit").html(`${render_format.to(last.money)}<span>₮</span>`);
+      $("#result-final").html(
+        `${render_format.to(totalRate + last.money)}<span>₮</span>`
+      );
+    }
+    $("#result-hvv").html(`${render_format.to(totalRate)}<span>₮</span>`);
     var result = render.map(function(render) {
       return `<tr>
       <td>${
@@ -227,7 +240,7 @@
       <td>${render.days}</td>
       <td>${render.rate.toFixed(0)}</td>
       <td>${render_format.to(render.money)}</td>
-      <td>0</td>
+      <td>${render_format.to(render.money + render.rate)}</td>
     </tr>`;
     });
     $("#result-table").html(result);
