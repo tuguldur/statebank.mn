@@ -67,6 +67,7 @@
   });
   $("#start-date").change(function() {
     printDate = $(this).val();
+    render_result();
   });
   /*
     ЭНГИЙН ТООЦООЛУУР ДАНС НЭЭХ МӨНГӨН ДҮН
@@ -74,7 +75,7 @@
   var amountSlider = document.getElementById("amount");
   var amountInput = $("#amount-input");
   noUiSlider.create(amountSlider, {
-    start: 100000,
+    start: 1000000,
     range: {
       min: 0,
       max: 200000000
@@ -88,7 +89,7 @@
   amountSlider.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     amountInput.val(value);
-    firstSaving = value.match(/\d+/g).join("");
+    firstSaving = parseInt(value.match(/\d+/g).join(""));
     render_result();
   });
   amountInput.on("change", function() {
@@ -115,7 +116,7 @@
   hvvSlider.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     hvvInput.val(value);
-    annualRate = value.match(/[+-]?\d+(\.\d+)?/g).join("");
+    annualRate = parseInt(value.match(/[+-]?\d+(\.\d+)?/g).join(""));
     render_result();
   });
   hvvInput.on("change", function() {
@@ -142,7 +143,7 @@
   amountMonthly.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     amountMonthlyInput.val(value);
-    monthlySaving = value.match(/\d+/g).join("");
+    monthlySaving = parseInt(value.match(/\d+/g).join(""));
     render_result();
   });
   amountMonthlyInput.on("change", function() {
@@ -179,31 +180,59 @@
   function render_result() {
     var month = printDate.substring(5, 7);
     var year = printDate.substring(0, 4);
+    var day = printDate.substring(8, 10);
+    var money = firstSaving;
+    var rate = 0;
+    let months = month;
     var render = [];
+    console.log(annualRate);
     for (var i = 0; i < duration; i++) {
-      if (month === 12) {
-        month = 1;
+      money = money + monthlySaving;
+      if (month === "12") {
+        render.push({
+          years: year,
+          months: month,
+          days: days(month, year),
+          rate: (((money * annualRate) / 10) * days(month, year)) / 365,
+          day: day,
+          money: money
+        });
+        months = 1;
         year++;
-      } else month++;
+        month = null;
+      } else if (months === 12) {
+        months = 1;
+        year++;
+      } else {
+        months++;
+      }
       render.push({
         years: year,
-        months: month,
-        days: days(month, year)
+        months: months,
+        days: days(months, year),
+        rate: (((money * annualRate) / 100) * days(month, year)) / 365,
+        day: day,
+        money
       });
     }
+    var render_format = wNumb({
+      thousand: ","
+    });
     var result = render.map(function(render) {
       return `<tr>
-      <td>${render.years}.${render.months}.${render.days}</td>
+      <td>${
+        render.years
+      }.${render.months}.${render.day > render.days ? render.days : render.day}</td>
       <td>${render.months}</td>
       <td>${render.days}</td>
-      <td>0</td>
-      <td>0</td>
+      <td>${render.rate.toFixed(0)}</td>
+      <td>${render_format.to(render.money)}</td>
       <td>0</td>
     </tr>`;
     });
     $("#result-table").html(result);
   }
   $("#type").on("change", function() {
-    console.log("dsa");
+    console.log("sda");
   });
 })(window.jQuery);
