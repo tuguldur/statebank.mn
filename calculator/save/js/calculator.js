@@ -209,7 +209,9 @@
         years: year,
         months: months,
         days: days(months, year),
-        rate: (((money * annualRate) / 100) * days(month, year)) / 365,
+        rate:
+          ((((money - monthlySaving) * annualRate) / 100) * days(month, year)) /
+          365,
         day: day,
         money
       });
