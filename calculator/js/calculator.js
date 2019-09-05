@@ -231,12 +231,12 @@
       );
     }
     $("#result-hvv").html(`${render_format.to(totalRate)}<span>₮</span>`);
-    var result = render.map(function(render) {
+    var result = render.map(function(render, index) {
       return `<tr>
       <td>${
         render.years
       }.${render.months}.${render.day > render.days ? render.days : render.day}</td>
-      <td>${render.months}</td>
+      <td>${index + 1}</td>
       <td>${render.days}</td>
       <td>${render.rate.toFixed(0)}</td>
       <td>${render_format.to(render.money)}</td>
