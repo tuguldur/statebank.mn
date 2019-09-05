@@ -215,6 +215,7 @@
       <td>${render.rate.toFixed(0)}</td>
       <td>${render_format.to(render.money)}</td>
       <td>${render_format.to(render.money + render.rate)}</td>
+      <td>0</td>
     </tr>`;
     });
     $("#result-table").html(result);
