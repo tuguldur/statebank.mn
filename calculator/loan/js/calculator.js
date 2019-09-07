@@ -6,7 +6,7 @@
   // vars
   var firstSaving = 0,
     annualRate = 0,
-    monthlySaving = 0,
+    monthlyPay = 0,
     duration = 0;
   // Эхлэх хугацаа
   // var oneDay = 24 * 60 * 60 * 1000;
@@ -151,6 +151,12 @@
     month.noUiSlider.set(value);
   });
   //  CALC RESULTS
+  /*
+  Жишээ: 10000₮ -ийг 6 сарын хугацаатай (182 хоног) жилийн 7.2%-ийн хүүтэй зээлдүүлсэн
+(хадгалуулсан) гэвэл эргэн төлөгдөх дүнг дараах байдлаар бодно.
+Эргэн төлөгдөх дүн = Үндсэн дүн + Хүү = P + I
+10000₮ -ийн 6 сарын хүүгийн орлого нь 359₮ (10359₮ - 10000₮ ) байна.
+  */
   function render_result() {
     var month = printDate.substring(5, 7);
     var year = printDate.substring(0, 4);
@@ -159,16 +165,25 @@
     var rate = 0;
     let months = month;
     var render = [];
-    for (var i = 0; i < duration; i++) {
-      money = money + monthlySaving;
+    monthlyPay = firstSaving / duration;
+    render.push({
+      years: 0,
+      months: 0,
+      days: 0,
+      rate: 0,
+      day: 0,
+      money: 0,
+      balance: money
+    });
+    for (let i = 0; i < duration; i++) {
       if (month === "12") {
-        render.push({
+        render_rate.push({
+          day: day,
           years: year,
           months: month,
           days: days(month, year),
-          rate: (((money * annualRate) / 100) * days(month, year)) / 365,
-          day: day,
-          money
+          rate:
+            money * (1 + ((annualRate / 100) * days(month, year)) / 365) - money
         });
         months = 1;
         year++;
@@ -179,14 +194,18 @@
       } else {
         months++;
       }
+      var rate =
+        money * (1 + ((annualRate / 100) * days(month, year)) / 365) - money;
       render.push({
+        day: day,
         years: year,
         months: months,
         days: days(months, year),
-        rate: (((money * annualRate) / 100) * days(month, year)) / 365,
-        day: day,
-        money
+        rate,
+        money: monthlyPay + rate,
+        balance: money - monthlyPay
       });
+      money -= monthlyPay;
     }
     var render_format = wNumb({
       decimals: 0,
@@ -210,12 +229,12 @@
       <td>${
         render.years
       }.${render.months}.${render.day > render.days ? render.days : render.day}</td>
-      <td>${index + 1}</td>
+      <td>${index}</td>
       <td>${render.days}</td>
       <td>${render.rate.toFixed(0)}</td>
+      <td>${render_format.to(render.money - render.rate)}</td>
       <td>${render_format.to(render.money)}</td>
-      <td>${render_format.to(render.money + render.rate)}</td>
-      <td>0</td>
+      <td>${render_format.to(render.balance)}</td>
     </tr>`;
     });
     $("#result-table").html(result);
