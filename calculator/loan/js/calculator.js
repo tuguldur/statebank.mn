@@ -211,18 +211,21 @@
       decimals: 0,
       thousand: ","
     });
-    let totalRate = 0;
+    let totalRate = 0,
+      payMonth = 0;
     for (i = 0; i < render.length; i++) {
       //loop through the array
       totalRate += render[i].rate; //Do the math!
+      payMonth += render[i].money;
     }
-    var last = (last = Object.values(render))[last.length - 1];
-    if (typeof last != "undefined") {
-      $("#result-niit").html(`${render_format.to(last.money)}<span>₮</span>`);
-      $("#result-final").html(
-        `${render_format.to(totalRate + last.money)}<span>₮</span>`
-      );
-    }
+
+    $("#result-pay-monthly").html(
+      `${render_format.to(payMonth / duration)}<span>₮</span>`
+    );
+    $("#result-pay-total").html(
+      `${render_format.to(firstSaving + totalRate)}<span>₮</span>`
+    );
+
     $("#result-hvv").html(`${render_format.to(totalRate)}<span>₮</span>`);
     var result = render.map(function(render, index) {
       return `<tr>
