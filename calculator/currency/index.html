@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i&display=swap"
+      rel="stylesheet"
+    />
+    <script src="jquery-3.4.1.min.js"></script>
+    <title>Ханш хөрвүүлэх</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+
+  <body>
+    <h5 class="text-center">Ханш хөрвүүлэх</h5>
+
+    <div class="form-group mb-3 select-type">
+      <label>
+        <input
+          type="radio"
+          name="optradio"
+          checked
+          class="mr-2 exchange-type"
+          value="1"
+        />Авах ханш</label
+      >
+      <label>
+        <input
+          type="radio"
+          name="optradio"
+          class="mr-2 exchange-type"
+          value="2"
+        />Зарах ханш</label
+      >
+    </div>
+    <div class="form-group mb-3">
+      <label for="exchange-value">Валютын хэмжээ</label>
+      <input
+        type="number"
+        class="form-control"
+        id="exchange-value"
+        placeholder="Валютын хэмжээ"
+      />
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <div class="input-group">
+          <label for="from">Валютын нэгжээс</label>
+          <select class="custom-select exchange-buy from-buy" id="from">
+            <option value="1">ТӨГ</option>
+          </select>
+          <select
+            class="custom-select exchange-sell from-sell"
+            id="from"
+            style="display: none"
+          >
+            <option value="1">ТӨГ</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="input-group">
+          <label for="to">Валютын нэгж рүү</label>
+          <select class="custom-select exchange-buy to-buy" id="to">
+            <option value="1">ТӨГ</option>
+          </select>
+          <select
+            class="custom-select exchange-sell to-sell"
+            id="to"
+            style="display: none"
+          >
+            <option value="1">ТӨГ</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exchange-result">Үр дүн</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exchange-result"
+        placeholder="Үр дүн"
+        readonly
+      />
+    </div>
+    <div style="padding: 40px; max-width: 40%">
+      <table
+        border="0"
+        cellpadding="3"
+        cellspacing="1"
+        width="100%"
+        bgcolor="white"
+      >
+        <tbody>
+          <tr bgcolor="#ededed">
+            <td><strong>Валют</strong></td>
+            <td><strong>Зарах</strong></td>
+            <td><strong>Авах</strong></td>
+          </tr>
+        </tbody>
+        <tbody id="currency-data"></tbody>
+      </table>
+    </div>
+    <script src="exchange.js"></script>
+  </body>
+</html>
