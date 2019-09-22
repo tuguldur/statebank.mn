@@ -250,7 +250,11 @@
       <td>${render.days}</td>
       <td>${render.rate.toFixed(0)}</td>
       <td>${render_format.to(render.money)}</td>
-      <td>${render_format.to(render.money + render.rate)}</td>
+      ${
+        monthlySaving
+          ? `<td>${render_format.to(render.money + render.rate)}</td>`
+          : ``
+      }
     </tr>`;
     });
     $("#result-table").html(result);
@@ -259,6 +263,9 @@
   const hvvContainer = $("#hvv-container");
   const valType = $("#save-val-type");
   const valOption = $("#type-val");
+
+  const amountMonthlyContainer = $("#amount-monthly-container");
+  const saveType = $("#save-type");
   // Main type
   $("#type").on("change", function() {
     var value = $(this).val();
@@ -266,7 +273,11 @@
       case "0":
         currency = "₮";
         hvvContainer.show();
+        amountMonthlyContainer.show();
+        $("#row-total").show();
+        $("#result-total-container").show();
         valType.hide();
+        saveType.hide();
         annualRate = parseInt(
           hvvInput
             .val()
@@ -276,10 +287,23 @@
         break;
       case "2":
         valOption.val("0");
+        saveType.hide();
         hvvContainer.hide();
         valType.show();
+        amountMonthlyContainer.show();
+        $("#row-total").show();
+        $("#result-total-container").show();
         render_rate("₮", countDays);
         break;
+      case "4":
+        saveType.val("0");
+        monthlySaving = 0;
+        hvvContainer.hide();
+        amountMonthlyContainer.hide();
+        valType.hide();
+        $("#result-total-container").hide();
+        $("#row-total").hide();
+        saveType.show();
       default:
         break;
     }
@@ -305,6 +329,19 @@
         break;
     }
     render_result();
+  });
+  // Хүү олгох нөхцөл
+  saveType.on("change", function() {
+    var value = $(this).val();
+    switch (value) {
+      case "0":
+        monthlySaving = 0;
+        break;
+      case "1":
+        break;
+      default:
+        break;
+    }
   });
   function render_rate(type, days) {
     currency = type;

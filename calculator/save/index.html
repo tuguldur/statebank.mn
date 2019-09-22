@@ -106,6 +106,27 @@
                       </div>
                     </div>
                   </div>
+                  <div id="save-type" style="display: none;">
+                    <div class="d-flex">
+                      <div class="form-inline">
+                        <label for="save-type-select" class="mr-3"
+                          >Хүү олгох нөхцөл :
+                        </label>
+                        <select
+                          name="save-type"
+                          id="save-type-select"
+                          class="form-control form-control-sm d-flex"
+                        >
+                          <option value="0" selected="selected"
+                            >Хүүг сар бүр бусад дансанд олгоно</option
+                          >
+                          <option value="1"
+                            >Хүүг сар бүр үндсэн дансанд олгоно</option
+                          >
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col s6">
@@ -128,7 +149,7 @@
                     <div id="month"></div>
                   </div>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="amount-monthly-container">
                   <div class="d-flex">
                     <div class="mt-1 lh-48">
                       Сард хийх мөнгөн дүн:
@@ -151,7 +172,7 @@
             </div>
           </div>
           <div class="form-group mt-2 pl-3 d-flex">
-            <div class="result-container">
+            <div class="result-container" id="result-total-container">
               <h3 class="result-text m-0" id="result-niit">-</h3>
               <h5 class="m-0 result-text">Таны хуримтлуулах мөнгө</h5>
             </div>
@@ -175,18 +196,15 @@
               <th>Хүү тооцсон хоног</th>
               <th>Бодогдох хүү</th>
               <th>Хадгалсан мөнгө</th>
-              <th>Нийт мөнгө</th>
+              <th id="row-total">Нийт мөнгө</th>
             </tr>
           </thead>
-
           <tbody id="result-table"></tbody>
         </table>
       </div>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
-
     <script src="js/materialize.min.js"></script>
-
     <script src="js/nouislider.min.js"></script>
     <script src="js/wNumb.js"></script>
     <script src="js/core.js"></script>
