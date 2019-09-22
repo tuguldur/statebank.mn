@@ -7,7 +7,9 @@
   var firstSaving = 0,
     annualRate = 0,
     monthlySaving = 0,
-    duration = 0;
+    duration = 0,
+    countDays = 0;
+  var currency = "₮";
   // Эхлэх хугацаа
   // var oneDay = 24 * 60 * 60 * 1000;
   var printDate = new Date()
@@ -178,6 +180,7 @@
     month.noUiSlider.set(value);
   });
   function render_result() {
+    countDays = 0;
     var month = printDate.substring(5, 7);
     var year = printDate.substring(0, 4);
     var day = printDate.substring(8, 10);
@@ -186,7 +189,6 @@
     let months = month;
     var render = [];
     for (var i = 0; i < duration; i++) {
-      money = money + monthlySaving;
       if (month === "12") {
         render.push({
           years: year,
@@ -205,6 +207,7 @@
       } else {
         months++;
       }
+      countDays += days(months, year);
       render.push({
         years: year,
         months: months,
@@ -215,6 +218,7 @@
         day: day,
         money
       });
+      money = money + monthlySaving;
     }
     var render_format = wNumb({
       decimals: 0,
@@ -227,12 +231,16 @@
     }
     var last = (last = Object.values(render))[last.length - 1];
     if (typeof last != "undefined") {
-      $("#result-niit").html(`${render_format.to(last.money)}<span>₮</span>`);
+      $("#result-niit").html(
+        `${render_format.to(last.money)}<span>${currency}</span>`
+      );
       $("#result-final").html(
-        `${render_format.to(totalRate + last.money)}<span>₮</span>`
+        `${render_format.to(totalRate + last.money)}<span>${currency}</span>`
       );
     }
-    $("#result-hvv").html(`${render_format.to(totalRate)}<span>₮</span>`);
+    $("#result-hvv").html(
+      `${render_format.to(totalRate)}<span>${currency}</span>`
+    );
     var result = render.map(function(render, index) {
       return `<tr>
       <td>${
@@ -247,7 +255,104 @@
     });
     $("#result-table").html(result);
   }
+  // SWITCH TYPE
+  const hvvContainer = $("#hvv-container");
+  const valType = $("#save-val-type");
+  const valOption = $("#type-val");
+  // Main type
   $("#type").on("change", function() {
-    console.log("sda");
+    var value = $(this).val();
+    switch (value) {
+      case "0":
+        currency = "₮";
+        hvvContainer.show();
+        valType.hide();
+        annualRate = parseInt(
+          hvvInput
+            .val()
+            .match(/[+-]?\d+(\.\d+)?/g)
+            .join("")
+        );
+        break;
+      case "2":
+        valOption.val("0");
+        hvvContainer.hide();
+        valType.show();
+        render_rate("₮", countDays);
+        break;
+      default:
+        break;
+    }
+    render_result();
   });
+  //currency type
+  valOption.on("change", function() {
+    var value = $(this).val();
+    switch (value) {
+      case "0":
+        render_rate("₮", countDays);
+        break;
+      case "1":
+        render_rate("$", countDays);
+        break;
+      case "2":
+        render_rate("€", countDays);
+        break;
+      case "3":
+        render_rate("¥", countDays);
+        break;
+      default:
+        break;
+    }
+    render_result();
+  });
+  function render_rate(type, days) {
+    currency = type;
+    switch (type) {
+      case "₮":
+        if (days <= 59) annualRate = 7.6;
+        else if (days <= 89) annualRate = 8.0;
+        else if (days <= 179) annualRate = 9.5;
+        else if (days <= 269) annualRate = 12.0;
+        else if (days <= 364) annualRate = 12.6;
+        else if (days <= 370) annualRate = 13.2;
+        else if (days <= 730) annualRate = 13.2;
+        else annualRate = 13.7;
+        break;
+      case "$":
+        if (days <= 179) annualRate = 2.4;
+        else if (days <= 269) annualRate = 3.2;
+        else if (days <= 364) annualRate = 4.6;
+        else if (days <= 369) annualRate = 5.0;
+        else annualRate = 5.0;
+        break;
+      case "€":
+        if (days <= 179) annualRate = 1.4;
+        else if (days <= 269) annualRate = 1.9;
+        else if (days <= 364) annualRate = 2.5;
+        else if (days <= 369) annualRate = 3.0;
+        else annualRate = 3.0;
+        break;
+      case "¥":
+        if (days <= 179) annualRate = 2.4;
+        else if (days <= 269) annualRate = 3.0;
+        else if (days <= 364) annualRate = 3.3;
+        else if (days <= 369) annualRate = 3.6;
+        else annualRate = 3.7;
+        break;
+      default:
+        break;
+    }
+  }
+  /*
+                  	Төгрөг    	Ам.Доллар 	Евро     	Юань
+  30-59 хоног      	7,6%	        
+  50-89 хоног      	8,0%	       
+  90-179 хоног	    9,5%	        2,40%	    1,4%	    2,4%
+  180-269 хоног     12,0%	        3,20%	    1,9%	    3,0%
+  270-364 хоног     12,6%	        4,60%	    2,5%	    3,3%
+  365 хоног	        13,2%	        5,00%	    3,0%	    3,6%
+  370-730 хоног     13,2%	        5,00%	    3,0%	    3,7%
+  731-1095 хоног    13,7%	        
+  */
 })(window.jQuery);
