@@ -8,7 +8,10 @@
     annualRate = 0,
     monthlySaving = 0,
     duration = 0,
-    countDays = 0;
+    countDays = 0,
+    currencyType,
+    currencyTypeMin,
+    monthlyRate = false;
   var currency = "₮";
   // Эхлэх хугацаа
   // var oneDay = 24 * 60 * 60 * 1000;
@@ -174,6 +177,8 @@
     monthInput.val(value);
     duration = value.match(/\d+/g).join("");
     render_result();
+    currencyType && currency_type(currencyType);
+    currencyTypeMin && currency_type(currencyTypeMin);
   });
   monthInput.on("change", function() {
     var value = $(this).val();
@@ -189,13 +194,15 @@
     let months = month;
     var render = [];
     for (var i = 0; i < duration; i++) {
+      rate = (((money * annualRate) / 100) * days(months, year)) / 365;
+      monthlyRate && (money += rate);
       if (month === "12") {
         render.push({
           years: year,
-          months: month,
-          days: days(month, year),
-          rate: (((money * annualRate) / 100) * days(months, year)) / 365,
-          day: day,
+          months,
+          days: days(months, year),
+          rate,
+          day,
           money
         });
         months = 1;
@@ -210,16 +217,13 @@
       countDays += days(months, year);
       render.push({
         years: year,
-        months: months,
+        months,
         days: days(months, year),
-        rate:
-          ((((money - monthlySaving) * annualRate) / 100) *
-            days(months, year)) /
-          365,
-        day: day,
+        rate,
+        day,
         money
       });
-      money = money + monthlySaving;
+      monthlySaving && (money += monthlySaving);
     }
     var render_format = wNumb({
       decimals: 0,
@@ -231,12 +235,17 @@
       totalRate += render[i].rate; //Do the math!
     }
     var last = (last = Object.values(render))[last.length - 1];
+    console.log(last);
     if (typeof last != "undefined") {
       $("#result-niit").html(
         `${render_format.to(last.money)}<span>${currency}</span>`
       );
       $("#result-final").html(
-        `${render_format.to(totalRate + last.money)}<span>${currency}</span>`
+        `${
+          monthlyRate
+            ? render_format.to(last.money)
+            : render_format.to(totalRate + last.money)
+        }<span>${currency}</span>`
       );
     }
     $("#result-hvv").html(
@@ -251,11 +260,8 @@
       <td>${render.days}</td>
       <td>${render.rate.toFixed(0)}</td>
       <td>${render_format.to(render.money)}</td>
-      ${
-        monthlySaving
-          ? `<td>${render_format.to(render.money + render.rate)}</td>`
-          : ``
-      }
+      ${monthlySaving &&
+        `<td>${render_format.to(render.money + render.rate)}</td>`}
     </tr>`;
     });
     $("#result-table").html(result);
@@ -263,10 +269,14 @@
   // SWITCH TYPE
   const hvvContainer = $("#hvv-container");
   const valType = $("#save-val-type");
+  const valTypeMin = $("#save-min-val-type");
   const valOption = $("#type-val");
+  const valMinOption = $("#type-val-min");
 
   const amountMonthlyContainer = $("#amount-monthly-container");
-  const saveType = $("#save-type");
+  const saveTypeContainer = $("#save-type");
+  const saveType = $("#save-type-select");
+
   // Main type
   $("#type").on("change", function() {
     var value = $(this).val();
@@ -278,7 +288,8 @@
         $("#row-total").show();
         $("#result-total-container").show();
         valType.hide();
-        saveType.hide();
+        saveTypeContainer.hide();
+        valTypeMin.hide();
         annualRate = parseInt(
           hvvInput
             .val()
@@ -288,23 +299,29 @@
         break;
       case "2":
         valOption.val("0");
-        saveType.hide();
+        currencyType = "0";
+        currency_type(currencyType);
+        saveTypeContainer.hide();
         hvvContainer.hide();
+        valTypeMin.hide();
         valType.show();
         amountMonthlyContainer.show();
         $("#row-total").show();
         $("#result-total-container").show();
-        render_rate("₮", countDays);
         break;
       case "4":
-        saveType.val("0");
+        saveTypeContainer.val("0");
         monthlySaving = 0;
+        valMinOption.val("4");
+        currencyTypeMin = "4";
+        currency_type(currencyTypeMin);
         hvvContainer.hide();
         amountMonthlyContainer.hide();
         valType.hide();
         $("#result-total-container").hide();
         $("#row-total").hide();
-        saveType.show();
+        saveTypeContainer.show();
+        valTypeMin.show();
       default:
         break;
     }
@@ -312,23 +329,14 @@
   });
   //currency type
   valOption.on("change", function() {
-    var value = $(this).val();
-    switch (value) {
-      case "0":
-        render_rate("₮", countDays);
-        break;
-      case "1":
-        render_rate("$", countDays);
-        break;
-      case "2":
-        render_rate("€", countDays);
-        break;
-      case "3":
-        render_rate("¥", countDays);
-        break;
-      default:
-        break;
-    }
+    currencyType = $(this).val();
+    currency_type(currencyType);
+    render_result();
+  });
+  //currency type min
+  valMinOption.on("change", function() {
+    currencyTypeMin = $(this).val();
+    currency_type(currencyTypeMin);
     render_result();
   });
   // Хүү олгох нөхцөл
@@ -337,17 +345,46 @@
     switch (value) {
       case "0":
         monthlySaving = 0;
+        render_result();
         break;
       case "1":
+        monthlyRate = true;
+        render_result();
         break;
       default:
         break;
     }
+    render_result();
   });
-  function render_rate(type, days) {
-    currency = type;
+  function currency_type(value) {
+    switch (value) {
+      case "0":
+        render_rate("₮", "1", countDays);
+        break;
+      case "1":
+        render_rate("$", "2", countDays);
+        break;
+      case "2":
+        render_rate("€", "3", countDays);
+        break;
+      case "3":
+        render_rate("¥", "4", countDays);
+        break;
+      case "4":
+        render_rate("₮", "5", countDays);
+        break;
+      case "5":
+        render_rate("$", "6", countDays);
+        break;
+      default:
+        break;
+    }
+  }
+  function render_rate(curr, type, days) {
+    console.log(type, countDays);
+    currency = curr;
     switch (type) {
-      case "₮":
+      case "1":
         if (days <= 59) annualRate = 7.6;
         else if (days <= 89) annualRate = 8.0;
         else if (days <= 179) annualRate = 9.5;
@@ -357,32 +394,45 @@
         else if (days <= 730) annualRate = 13.2;
         else annualRate = 13.7;
         break;
-      case "$":
+      case "2":
         if (days <= 179) annualRate = 2.4;
         else if (days <= 269) annualRate = 3.2;
         else if (days <= 364) annualRate = 4.6;
         else if (days <= 369) annualRate = 5.0;
         else annualRate = 5.0;
         break;
-      case "€":
+      case "3":
         if (days <= 179) annualRate = 1.4;
         else if (days <= 269) annualRate = 1.9;
         else if (days <= 364) annualRate = 2.5;
         else if (days <= 369) annualRate = 3.0;
         else annualRate = 3.0;
         break;
-      case "¥":
+      case "4":
         if (days <= 179) annualRate = 2.4;
         else if (days <= 269) annualRate = 3.0;
         else if (days <= 364) annualRate = 3.3;
         else if (days <= 369) annualRate = 3.6;
         else annualRate = 3.7;
         break;
+      case "5":
+        if (days <= 179) annualRate = 9.11;
+        else if (days <= 269) annualRate = 11.39;
+        else if (days <= 364) annualRate = 11.93;
+        else if (days <= 730) annualRate = 12.46;
+        else annualRate = 12.91;
+        break;
+      case "6":
+        if (days <= 179) annualRate = 2.37;
+        else if ((days = 269)) annualRate = 3.05;
+        else annualRate = 4.2;
+        break;
       default:
         break;
     }
   }
   /*
+  Хугацаатай 
                   	Төгрөг    	Ам.Доллар 	Евро     	Юань
   30-59 хоног      	7,6%	        
   50-89 хоног      	8,0%	       
@@ -393,4 +443,13 @@
   370-730 хоног     13,2%	        5,00%	    3,0%	    3,7%
   731-1095 хоног    13,7%	        
   */
+  /*
+  Хүүгээр аривжих
+  90-179 хоног	    9,11%	        2,37%
+  180-269 хоног	    11,39%	      3,05%
+  270-364 хоног	    11,93%	        -
+  365 хоног 	 	      -           4,2%
+  370-730 хоног   	12,46%	 
+  731-1095 хоног   	12,91%	        -
+ */
 })(window.jQuery);
