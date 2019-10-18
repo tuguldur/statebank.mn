@@ -235,7 +235,6 @@
       totalRate += render[i].rate; //Do the math!
     }
     var last = (last = Object.values(render))[last.length - 1];
-    console.log(last);
     if (typeof last != "undefined") {
       $("#result-niit").html(
         `${render_format.to(last.money)}<span>${currency}</span>`
@@ -265,6 +264,7 @@
     </tr>`;
     });
     $("#result-table").html(result);
+    console.log(annualRate);
   }
   // SWITCH TYPE
   const hvvContainer = $("#hvv-container");
@@ -296,6 +296,7 @@
             .match(/[+-]?\d+(\.\d+)?/g)
             .join("")
         );
+        monthlySaving = true;
         break;
       case "2":
         valOption.val("0");
@@ -308,6 +309,7 @@
         amountMonthlyContainer.show();
         $("#row-total").show();
         $("#result-total-container").show();
+        monthlySaving = true;
         break;
       case "4":
         saveTypeContainer.val("0");
@@ -344,12 +346,11 @@
     var value = $(this).val();
     switch (value) {
       case "0":
+        monthlyRate = false;
         monthlySaving = 0;
-        render_result();
         break;
       case "1":
         monthlyRate = true;
-        render_result();
         break;
       default:
         break;
@@ -381,7 +382,6 @@
     }
   }
   function render_rate(curr, type, days) {
-    console.log(type, countDays);
     currency = curr;
     switch (type) {
       case "1":
@@ -424,7 +424,7 @@
         break;
       case "6":
         if (days <= 179) annualRate = 2.37;
-        else if ((days = 269)) annualRate = 3.05;
+        else if (days == 269) annualRate = 3.05;
         else annualRate = 4.2;
         break;
       default:
