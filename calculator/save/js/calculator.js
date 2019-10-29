@@ -12,6 +12,7 @@
     currencyType,
     currencyTypeMin,
     monthlyRate = false;
+  childSaving = false;
   var currency = "₮";
   // Эхлэх хугацаа
   // var oneDay = 24 * 60 * 60 * 1000;
@@ -264,7 +265,9 @@
     </tr>`;
     });
     $("#result-table").html(result);
-    console.log(annualRate + " " + monthlySaving + " " + monthlyRate);
+    console.log(
+      annualRate + " " + monthlySaving + " " + monthlyRate + " " + annualRate
+    );
   }
   // SWITCH TYPE
   const hvvContainer = $("#hvv-container");
@@ -276,6 +279,7 @@
   const amountMonthlyContainer = $("#amount-monthly-container");
   const saveTypeContainer = $("#save-type");
   const saveType = $("#save-type-select");
+  const durationContainer = $("#duration");
 
   // Main type
   $("#type").on("change", function() {
@@ -283,6 +287,19 @@
     switch (value) {
       // Энгийн тооцоолуур
       case "0":
+        month.noUiSlider.updateOptions({
+          start: 12,
+          range: {
+            min: 0,
+            max: 360
+          },
+          format: wNumb({
+            decimals: 0,
+            thousand: ",",
+            suffix: " сар"
+          })
+        });
+        childSaving = false;
         currency = "₮";
         hvvContainer.show();
         amountMonthlyContainer.show();
@@ -307,6 +324,19 @@
         break;
       // Иргэдийн хугацаатай хадгаламж
       case "2":
+        month.noUiSlider.updateOptions({
+          start: 12,
+          range: {
+            min: 0,
+            max: 360
+          },
+          format: wNumb({
+            decimals: 0,
+            thousand: ",",
+            suffix: " сар"
+          })
+        });
+        childSaving = false;
         valOption.val("0");
         currencyType = "0";
         currency_type(currencyType);
@@ -327,6 +357,19 @@
         break;
       // Хүүгээр арвижих хадгаламж
       case "4":
+        month.noUiSlider.updateOptions({
+          start: 12,
+          range: {
+            min: 0,
+            max: 360
+          },
+          format: wNumb({
+            decimals: 0,
+            thousand: ",",
+            suffix: " сар"
+          })
+        });
+        childSaving = false;
         saveTypeContainer.val("0");
         monthlySaving = 0;
         valMinOption.val("4");
@@ -339,6 +382,32 @@
         $("#row-total").hide();
         saveTypeContainer.show();
         valTypeMin.show();
+        break;
+      case "5":
+        hvvContainer.hide();
+        valType.hide();
+        valTypeMin.show();
+        $("#result-total-container").show();
+        childSaving = true;
+        month.noUiSlider.updateOptions({
+          start: 12,
+          range: {
+            min: 12,
+            max: 216
+          },
+          step: 12,
+          format: wNumb({
+            decimals: 0,
+            thousand: ",",
+            suffix: " сар"
+          })
+        });
+        valMinOption.val("4");
+        currencyTypeMin = "4";
+        currency_type(currencyTypeMin);
+        duration = 12;
+        break;
+      case "6":
         break;
       default:
         break;
@@ -397,6 +466,7 @@
         break;
     }
   }
+  console.log(countDays);
   function render_rate(curr, type, days) {
     currency = curr;
     switch (type) {
@@ -432,6 +502,10 @@
         else annualRate = 3.7;
         break;
       case "5":
+        if (childSaving) {
+          annualRate = 13.7;
+          break;
+        }
         if (days <= 179) annualRate = 9.11;
         else if (days <= 269) annualRate = 11.39;
         else if (days <= 364) annualRate = 11.93;
@@ -439,6 +513,10 @@
         else annualRate = 12.91;
         break;
       case "6":
+        if (childSaving) {
+          annualRate = 5.4;
+          break;
+        }
         if (days <= 179) annualRate = 2.37;
         else if (days == 269) annualRate = 3.05;
         else annualRate = 4.2;
