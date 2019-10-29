@@ -11,6 +11,7 @@
     countDays = 0,
     currencyType,
     currencyTypeMin,
+    currencyTypeMalchin,
     monthlyRate = false;
   childSaving = false;
   var currency = "₮";
@@ -180,6 +181,7 @@
     render_result();
     currencyType && currency_type(currencyType);
     currencyTypeMin && currency_type(currencyTypeMin);
+    currencyTypeMalchin && currency_type(currencyTypeMalchin);
   });
   monthInput.on("change", function() {
     var value = $(this).val();
@@ -265,9 +267,6 @@
     </tr>`;
     });
     $("#result-table").html(result);
-    console.log(
-      annualRate + " " + monthlySaving + " " + monthlyRate + " " + annualRate
-    );
   }
   // SWITCH TYPE
   const hvvContainer = $("#hvv-container");
@@ -408,6 +407,35 @@
         duration = 12;
         break;
       case "6":
+        month.noUiSlider.updateOptions({
+          start: 12,
+          range: {
+            min: 0,
+            max: 360
+          },
+          format: wNumb({
+            decimals: 0,
+            thousand: ",",
+            suffix: " сар"
+          })
+        });
+        childSaving = false;
+        currencyTypeMalchin = "6";
+        currency_type(currencyTypeMalchin);
+        hvvContainer.hide();
+        amountMonthlyContainer.show();
+        $("#row-total").show();
+        $("#result-total-container").show();
+        valType.hide();
+        saveTypeContainer.hide();
+        valTypeMin.hide();
+        monthlySaving = parseInt(
+          amountMonthlyInput
+            .val()
+            .match(/[+-]?\d+(\.\d+)?/g)
+            .join("")
+        );
+        monthlyRate = false;
         break;
       default:
         break;
@@ -461,12 +489,13 @@
         break;
       case "5":
         render_rate("$", "6", countDays);
+      case "6":
+        render_rate("₮", "7", countDays);
         break;
       default:
         break;
     }
   }
-  console.log(countDays);
   function render_rate(curr, type, days) {
     currency = curr;
     switch (type) {
@@ -521,6 +550,12 @@
         else if (days == 269) annualRate = 3.05;
         else annualRate = 4.2;
         break;
+      case "7":
+        if (days <= 179) annualRate = 9.5;
+        else if (days <= 364) annualRate = 11.8;
+        else if (days <= 365) annualRate = 13.3;
+        else annualRate = 13.6;
+        break;
       default:
         break;
     }
@@ -545,5 +580,12 @@
   365 хоног 	 	      -           4,2%
   370-730 хоног   	12,46%	 
   731-1095 хоног   	12,91%	        -
+
+  Ангилал	Төгрөг    /жилийн хүү/
+  90-179 хоног	    9,5%
+  180-364 хоног	    11,8%
+  365 хоног	        13,3%
+  370-730 хоног	    13,6%
+  731-1095 хоног	  13,6%
  */
 })(window.jQuery);
