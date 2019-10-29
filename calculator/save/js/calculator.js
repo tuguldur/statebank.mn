@@ -264,7 +264,7 @@
     </tr>`;
     });
     $("#result-table").html(result);
-    console.log(annualRate);
+    console.log(annualRate + " " + monthlySaving + " " + monthlyRate);
   }
   // SWITCH TYPE
   const hvvContainer = $("#hvv-container");
@@ -281,6 +281,7 @@
   $("#type").on("change", function() {
     var value = $(this).val();
     switch (value) {
+      // Энгийн тооцоолуур
       case "0":
         currency = "₮";
         hvvContainer.show();
@@ -296,8 +297,15 @@
             .match(/[+-]?\d+(\.\d+)?/g)
             .join("")
         );
-        monthlySaving = true;
+        monthlySaving = parseInt(
+          amountMonthlyInput
+            .val()
+            .match(/[+-]?\d+(\.\d+)?/g)
+            .join("")
+        );
+        monthlyRate = false;
         break;
+      // Иргэдийн хугацаатай хадгаламж
       case "2":
         valOption.val("0");
         currencyType = "0";
@@ -309,8 +317,15 @@
         amountMonthlyContainer.show();
         $("#row-total").show();
         $("#result-total-container").show();
-        monthlySaving = true;
+        monthlySaving = parseInt(
+          amountMonthlyInput
+            .val()
+            .match(/[+-]?\d+(\.\d+)?/g)
+            .join("")
+        );
+        monthlyRate = false;
         break;
+      // Хүүгээр арвижих хадгаламж
       case "4":
         saveTypeContainer.val("0");
         monthlySaving = 0;
@@ -324,6 +339,7 @@
         $("#row-total").hide();
         saveTypeContainer.show();
         valTypeMin.show();
+        break;
       default:
         break;
     }
