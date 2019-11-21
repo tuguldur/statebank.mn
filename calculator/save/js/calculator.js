@@ -500,6 +500,7 @@
     currency = curr;
     switch (type) {
       case "1":
+        //"Иргэний хугацаатай хадгаламж төгрөг
         if (days <= 59) annualRate = 7.6;
         else if (days <= 89) annualRate = 8.0;
         else if (days <= 179) annualRate = 9.5;
@@ -510,6 +511,7 @@
         else annualRate = 13.7;
         break;
       case "2":
+        //Иргэний хугацаатай хадгаламж Ам.Доллар
         if (days <= 179) annualRate = 2.4;
         else if (days <= 269) annualRate = 3.2;
         else if (days <= 364) annualRate = 4.6;
@@ -517,6 +519,7 @@
         else annualRate = 5.0;
         break;
       case "3":
+        //Иргэний хугацаатай хадгаламж Ёвро
         if (days <= 179) annualRate = 1.4;
         else if (days <= 269) annualRate = 1.9;
         else if (days <= 364) annualRate = 2.5;
@@ -524,6 +527,7 @@
         else annualRate = 3.0;
         break;
       case "4":
+        //Иргэний хугацаатай хадгаламж Юань;
         if (days <= 179) annualRate = 2.4;
         else if (days <= 269) annualRate = 3.0;
         else if (days <= 364) annualRate = 3.3;
@@ -531,7 +535,9 @@
         else annualRate = 3.7;
         break;
       case "5":
+        //Хүүгээр арвижих хадгаламж төгрөг
         if (childSaving) {
+          //Хүүхдийн хадгаламж төгрөг
           annualRate = 13.7;
           break;
         }
@@ -542,7 +548,9 @@
         else annualRate = 12.91;
         break;
       case "6":
+        //Хүүгээр арвижих хадгаламж Ам.Доллар
         if (childSaving) {
+          //Хүүхдийн хадгаламж Ам.Доллар
           annualRate = 5.4;
           break;
         }
@@ -551,6 +559,7 @@
         else annualRate = 4.2;
         break;
       case "7":
+        //Малчны хадгаламж
         if (days <= 179) annualRate = 9.5;
         else if (days <= 364) annualRate = 11.8;
         else if (days <= 365) annualRate = 13.3;
