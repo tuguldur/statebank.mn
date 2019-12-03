@@ -8,6 +8,7 @@
     annualRate = 0,
     monthlyPay = 0,
     duration = 0;
+  var render_rate = [];
   // Эхлэх хугацаа
   // var oneDay = 24 * 60 * 60 * 1000;
   var printDate = new Date()
