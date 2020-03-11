@@ -193,7 +193,7 @@
             render_type === 1
               ? money * (1 + ((annualRate / 100) * days(month, year)) / 365) -
                 money
-              : money / (annualRate / 12 / 100)
+              : money * (annualRate / 12 / 100)
         });
         months = 1;
         year++;
