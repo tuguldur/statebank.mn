@@ -117,7 +117,7 @@
   hvvSlider.noUiSlider.on("update", function(values, handle) {
     var value = values[handle];
     hvvInput.val(value);
-    annualRate = parseInt(value.match(/[+-]?\d+(\.\d+)?/g).join(""));
+    annualRate = parseFloat(value.match(/[+-]?\d+(\.\d+)?/g).join(""));
     render_result();
   });
   hvvInput.on("change", function() {
