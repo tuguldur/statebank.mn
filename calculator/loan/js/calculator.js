@@ -9,6 +9,7 @@
     monthlyPay = 0,
     duration = 0;
   var render_rate = [];
+  var render_type = 1;
   // Эхлэх хугацаа
   // var oneDay = 24 * 60 * 60 * 1000;
   var printDate = new Date()
@@ -158,12 +159,11 @@
 Эргэн төлөгдөх дүн = Үндсэн дүн + Хүү = P + I
 10000₮ -ийн 6 сарын хүүгийн орлого нь 359₮ (10359₮ - 10000₮ ) байна.
   */
-  var render_type = 1;
   $("#render-type").change(function() {
     render_type = parseInt($(this).val());
     render_result();
-    console.log(render_type);
   });
+
   function render_result() {
     var month = printDate.substring(5, 7);
     var year = printDate.substring(0, 4);
@@ -232,6 +232,7 @@
     }
 
     $("#result-pay-monthly").html(
+      // Тухайн хугацааны төлбөр = Зээлийн нийт дүн(payMonth) / Эргэн төлөлт хийх тоо (duration) + Хүү
       `${render_format.to(payMonth / duration)}<span>₮</span>`
     );
     $("#result-pay-total").html(
