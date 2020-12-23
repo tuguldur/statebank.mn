@@ -191,7 +191,7 @@
           days: days(month, year),
           rate:
             render_type === 1
-              ? money * (1 + ((annualRate / 100) * days(month, year)) / 365) -
+              ? money * (1 + ((annualRate / 100) * days(months, year)) / 365) -
                 money
               : money * (annualRate / 12 / 100)
         });
@@ -206,7 +206,8 @@
       }
       var rate =
         render_type === 1
-          ? money * (1 + ((annualRate / 100) * days(month, year)) / 365) - money
+          ? money * (1 + ((annualRate / 100) * days(months, year)) / 365) -
+            money
           : money * (annualRate / 12 / 100);
       render.push({
         day: day,
